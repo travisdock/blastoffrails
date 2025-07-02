@@ -44,6 +44,32 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.rocket-text {
+  animation: rocketLaunch 2s ease-out forwards;
+  transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
+  opacity: 0;
+}
+
+@keyframes rocketLaunch {
+  0% {
+    transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-20px) translateX(10px) rotate(-10deg);
+  }
+  85% {
+    transform: translateY(10px) translateX(-5px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
 .coming-soon .tagline {
   font-size: 2rem;
   color: var(--text-dark);
