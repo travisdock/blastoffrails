@@ -125,12 +125,20 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Conference Date */
+.conference-info {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
 /* Coming Soon Message */
 .coming-soon {
     font-size: 2rem;
     color: var(--text-dark);
     font-weight: 400;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
@@ -186,11 +194,11 @@ footer {
     .logo {
         font-size: 1.75rem;
     }
-    
+
     .mobile-menu-toggle {
         display: flex;
     }
-    
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -207,35 +215,40 @@ footer {
         transition: all 0.3s ease;
         z-index: 999;
     }
-    
+
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-    
+
     .nav-links li {
         margin: 0;
         text-align: center;
     }
-    
+
     .nav-links a {
         font-size: 1.125rem;
         padding: 0.75rem 1rem;
         display: block;
         border-bottom: 1px solid rgba(79, 109, 123, 0.1);
     }
-    
+
     .nav-links a:hover {
         background-color: rgba(233, 112, 45, 0.1);
     }
-    
+
     .hero h1,
     .page-content h1 {
         font-size: 3rem;
         white-space: nowrap;
     }
-    
+
+    .conference-info {
+        font-size: 1.75rem;
+        white-space: nowrap;
+    }
+
     .coming-soon {
         font-size: 1.5rem;
     }
@@ -245,6 +258,7 @@ footer {
   animation: rocketLaunch 2s ease-out forwards;
   transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
   opacity: 0;
+  margin-bottom: 0rem !important;
 }
 
 @keyframes rocketLaunch {
