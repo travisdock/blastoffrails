@@ -1,15 +1,6 @@
 # Context
 This is the repository for a conference website, Blastoff Rails.
-Keep things as simple as possible. Eleventy static site generator, html, css, js.
-Prefer not to add dependencies to the project but if it is absolutely necessary ask first.
-
-# WebC Components
-The project uses WebC for components. Key setup details:
-- WebC plugin is configured in .eleventy.js with components in src/_components/
-- Pages that use WebC components must have .webc extension
-- Components should use webc:root attribute on the html element to avoid wrapper elements
-- Use webc:keep on <link> and <script> tags to prevent inlining
-- The page-layout.webc component provides the base HTML structure for all pages
+Keep things as simple as possible. HTML, CSS, Javascript only.
 
 # Colors Guide
 "text": "#4f6d7bff",          // paynes-gray: clean and readable
