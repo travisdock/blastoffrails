@@ -231,6 +231,7 @@ footer {
     .hero h1,
     .page-content h1 {
         font-size: 3rem;
+        white-space: nowrap;
     }
     
     .coming-soon {
