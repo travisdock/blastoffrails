@@ -575,12 +575,12 @@ animation: ml-form-embedSubmitLoad 1.2s linear infinite;
   #mlb2-27987994.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
     color: #ff0000 !important;
   }
-        @media only screen and (max-width: 400px){
+        @media only screen and (max-width: 480px){
 
     .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
     .ml-form-formContent.horozintalForm { float: left!important; }
     .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
-    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+    .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; margin-bottom: 15px!important; }
     .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
     .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
     .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
@@ -611,13 +611,13 @@ animation: ml-form-embedSubmitLoad 1.2s linear infinite;
 
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 480px) {
     #mlb2-27987994.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-      padding: 0 0 10px 0 !important;
+      padding: 0 0 15px 0 !important;
     }
     .ml-hide-horizontal { display: none !important; }
     .ml-form-formContent.horozintalForm .ml-button-horizontal { display: none!important; }
-    .ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px;width:100%; }
+    .ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px; width:100%; margin-top: 15px!important; }
     .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-bottom: 0px !important; }
   }
 
