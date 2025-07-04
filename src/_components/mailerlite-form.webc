@@ -60,16 +60,16 @@ animation: ml-form-embedSubmitLoad 1.2s linear infinite;
     letter-spacing: normal !important;
   }
   #mlb2-27987994.ml-form-embedContainer .ml-form-embedWrapper {
-    background-color: #fef0d4;
+    background-color: transparent;
     
-    border-width: 0px;
-    border-color: transparent;
-    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgba(180, 64, 35, 0.2);
+    border-radius: 8px;
     border-style: solid;
     box-sizing: border-box;
     display: inline-block !important;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     position: relative;
           }
   #mlb2-27987994.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
