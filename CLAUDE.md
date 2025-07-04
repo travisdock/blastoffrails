@@ -14,3 +14,19 @@ IMPORTANT: Do not use the word "Conference" on the site. Just use "Blastoff Rail
 "bg": "#fef0d4ff",            // papaya-whip: soft, welcoming background
 "bg-alt": "#ffffff",          // white: clean alternate background
 "overlay": "#54291ecc"        // caput-mortuum with opacity for overlays
+
+# Directory Structure
+```
+assets/
+├── css/
+│   ├── styles.css
+│   └── mailerlite.css
+├── js/
+│   └── mailerlite.js
+└── images/
+    ├── speakers/      # Speaker photos
+    ├── sponsors/      # Sponsor logos
+    ├── icons/         # Site icons, favicons
+    ├── hero/          # Hero/banner images
+    └── backgrounds/   # Background images
+```
