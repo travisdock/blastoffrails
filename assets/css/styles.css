@@ -57,7 +57,9 @@ header {
 
 .logo-image {
     height: 4rem;
-    width: auto;
+    width: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
