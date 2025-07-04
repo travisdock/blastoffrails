@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title @text="title + ' - Blastoff Rails'"></title>
+    <link rel="icon" href="/images/favicons/favicon.ico" sizes="32x32" webc:keep>
+    <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml" webc:keep>
+    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" webc:keep>
+    <link rel="manifest" href="/images/favicons/site.webmanifest" webc:keep>
     <link rel="stylesheet" href="/css/style.css" webc:keep>
 </head>
 <body>
