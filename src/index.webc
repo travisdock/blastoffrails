@@ -31,7 +31,9 @@
             <p class="tagline">Coming Soon</p>
         </div>
         
-        <mailerlite-form></mailerlite-form>
+        <div class="newsletter-section">
+            <mailerlite-form></mailerlite-form>
+        </div>
     </main>
 
     <script webc:keep>
