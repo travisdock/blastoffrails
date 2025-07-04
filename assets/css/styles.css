@@ -32,13 +32,13 @@ body {
 header {
     background-color: var(--bg);
     border-bottom: 3px solid var(--border);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 3rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +48,16 @@ header {
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+    height: 4rem;
+    width: auto;
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
