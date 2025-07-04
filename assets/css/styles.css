@@ -389,28 +389,41 @@ footer {
 
 /* Mobile Responsive for Sponsor Page */
 @media (max-width: 768px) {
+    .page-content {
+        padding: 0rem;
+    }
+
+    .hero {
+      padding: 1rem;
+    }
+
     .sponsor-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
     }
-    
+
     .sponsor-slot {
-        padding: 1.5rem;
+        padding: 0.5rem;
     }
-    
+
     .sponsor-placeholder {
-        width: 160px;
-        height: 100px;
+        width: 100%;
+        max-width: 80px;
+        height: 60px;
     }
-    
+
+    .placeholder-text {
+        font-size: 0.7rem;
+    }
+
     .sponsor-cta {
         padding: 2rem 1.5rem;
     }
-    
+
     .sponsor-cta h2 {
         font-size: 2rem;
     }
-    
+
     .intro-text {
         font-size: 1.1rem;
     }
