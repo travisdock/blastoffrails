@@ -114,7 +114,6 @@ main {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 8rem 2rem;
 }
 
 .page-content h1 {
@@ -279,4 +278,137 @@ footer {
     transform: translateY(0) translateX(0) rotate(0deg);
     opacity: 1;
   }
+}
+
+/* Sponsor Page Styles */
+.intro-text {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 4rem;
+    line-height: 1.8;
+}
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.sponsor-slot {
+    background-color: var(--bg-alt);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-slot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(84, 41, 30, 0.15);
+}
+
+.sponsor-placeholder {
+    width: 200px;
+    height: 120px;
+    background-color: var(--bg);
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.sponsor-slot:hover .sponsor-placeholder {
+    background-color: rgba(233, 112, 45, 0.1);
+}
+
+.placeholder-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.sponsor-slot h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.sponsor-slot p {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.sponsor-cta {
+    background-color: var(--bg-alt);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+}
+
+.sponsor-cta h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.sponsor-cta p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--bg-alt);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive for Sponsor Page */
+@media (max-width: 768px) {
+    .sponsor-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .sponsor-slot {
+        padding: 1.5rem;
+    }
+    
+    .sponsor-placeholder {
+        width: 160px;
+        height: 100px;
+    }
+    
+    .sponsor-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .sponsor-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
 }
