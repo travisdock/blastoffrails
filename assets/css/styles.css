@@ -255,7 +255,7 @@ footer {
 }
 
 .rocket-text {
-  animation: rocketLaunch 2s ease-out forwards;
+  animation: rocketLaunch 1.5s ease-out forwards;
   transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
   opacity: 0;
   margin-bottom: 0rem !important;
