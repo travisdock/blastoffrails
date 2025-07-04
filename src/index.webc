@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blastoff Rails - Coming Soon</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" webc:keep>
 </head>
 <body>
     <header class="navbar">
@@ -30,9 +30,11 @@
             <h1 class="rocket-text">Blastoff Rails</h1>
             <p class="tagline">Coming Soon</p>
         </div>
+        
+        <mailerlite-form></mailerlite-form>
     </main>
 
-    <script>
+    <script webc:keep>
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
         
