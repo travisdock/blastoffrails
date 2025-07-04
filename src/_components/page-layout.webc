@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" webc:root>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor - Blastoff Rails</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title @text="title + ' - Blastoff Rails'"></title>
+    <link rel="stylesheet" href="/css/style.css" webc:keep>
 </head>
 <body>
     <header class="navbar">
@@ -27,15 +27,15 @@
 
     <main class="container">
         <div class="coming-soon">
-            <h1>Sponsor</h1>
+            <h1 @text="title"></h1>
             <p class="tagline">Coming Soon</p>
         </div>
     </main>
 
-    <script>
+    <script webc:keep>
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        
+
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
