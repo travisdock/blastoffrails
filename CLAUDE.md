@@ -2,6 +2,8 @@
 This is the repository for a conference website, Blastoff Rails.
 Keep things as simple as possible. HTML, CSS, Javascript only.
 
+IMPORTANT: Do not use the word "Conference" on the site. Just use "Blastoff Rails" or let context imply it's a conference (e.g., "Speakers" page clearly refers to conference speakers).
+
 # Colors Guide
 "text": "#4f6d7bff",          // paynes-gray: clean and readable
 "text-dark": "#54291eff",     // caput-mortuum: deep, strong contrast
