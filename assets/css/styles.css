@@ -120,7 +120,6 @@ main {
 .page-content h1 {
     font-size: 5rem;
     color: var(--primary);
-    margin-bottom: 3rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -426,5 +425,88 @@ footer {
 
     .intro-text {
         font-size: 1.1rem;
+    }
+}
+
+/* Ticket Page Styles */
+.ticket-info h2 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.ticket-info > p {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.ticket-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ticket-card {
+    background-color: var(--bg-alt);
+    border: 3px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(84, 41, 30, 0.2);
+}
+
+.ticket-card h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.ticket-card .price {
+    font-size: 3rem;
+    color: var(--secondary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ticket-card p:last-child {
+    font-size: 1.125rem;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Mobile Responsive for Ticket Page */
+@media (max-width: 768px) {
+    .ticket-info h2 {
+        font-size: 2rem;
+    }
+    
+    .ticket-info > p {
+        font-size: 1.25rem;
+    }
+    
+    .ticket-types {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .ticket-card {
+        padding: 2rem;
+    }
+    
+    .ticket-card h3 {
+        font-size: 1.75rem;
+    }
+    
+    .ticket-card .price {
+        font-size: 2.5rem;
     }
 }
