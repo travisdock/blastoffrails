@@ -223,6 +223,19 @@ footer {
     vertical-align: middle;
 }
 
+p.footer-disclaimer {
+    font-size: 0.75rem;
+    color: var(--text);
+    opacity: 0.7;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(79, 109, 123, 0.2);
+    line-height: 1.4;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Social Media Links */
 .social-media-links {
     display: flex;
