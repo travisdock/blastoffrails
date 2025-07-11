@@ -30,3 +30,6 @@ assets/
     ├── hero/          # Hero/banner images
     └── backgrounds/   # Background images
 ```
+
+# Note
+- If you make changes, update the sitemap.xml
