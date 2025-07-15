@@ -633,16 +633,7 @@ p.footer-disclaimer {
 .venue-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-}
-
-.venue-info h3 a {
     color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.venue-info h3 a:hover {
-    color: var(--primary-dark);
 }
 
 .venue-info p {
@@ -664,27 +655,12 @@ p.footer-disclaimer {
     border: 3px solid var(--border);
     border-radius: 12px;
     padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hotel-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(84, 41, 30, 0.2);
 }
 
 .hotel-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-}
-
-.hotel-card h3 a {
     color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.hotel-card h3 a:hover {
-    color: var(--primary-dark);
 }
 
 .hotel-card .distance {
@@ -744,16 +720,7 @@ p.footer-disclaimer {
 .food-item h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-}
-
-.food-item h3 a {
     color: var(--primary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.food-item h3 a:hover {
-    color: var(--primary-dark);
 }
 
 .food-item .distance {
@@ -763,10 +730,29 @@ p.footer-disclaimer {
     font-style: italic;
 }
 
-.food-item p:last-child {
+.food-item p:not(.distance) {
     color: var(--text-dark);
     font-size: 1.125rem;
     line-height: 1.6;
+}
+
+/* Card Links */
+.card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--bg-alt);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 /* Mobile Responsive for Travel Page */
@@ -800,10 +786,6 @@ p.footer-disclaimer {
     .hotel-card h3 {
         font-size: 1.25rem;
         word-wrap: break-word;
-    }
-    
-    .hotel-card h3 a {
-        display: block;
     }
     
     .hotel-card .price {
