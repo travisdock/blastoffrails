@@ -15,7 +15,28 @@ This repository contains the source code for the Blastoff Rails website. The sit
 
 ## Development
 
-This is a static website with no build process required. Simply open the HTML files in a web browser to view the site locally.
+This is a static website with no build process required.
+
+### Running Locally
+
+To view the site locally in your browser:
+
+1. **Simple file opening** (basic functionality):
+   ```bash
+   open index.html
+   ```
+   Or simply double-click `index.html` in your file manager.
+
+2. **Local HTTP server** (recommended for full functionality):
+   ```bash
+   # Using Python (if installed)
+   python -m http.server 8000
+
+   # Using Node.js (if installed)
+   npx http-server
+   ```
+
+Note: A local HTTP server is recommended to avoid CORS issues and ensure all features work properly.
 
 ### Making Changes
 
