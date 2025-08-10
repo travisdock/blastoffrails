@@ -151,43 +151,65 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Copy package details functionality
     copyButton.addEventListener('click', async function() {
-        try {
-            await navigator.clipboard.writeText(currentPackageDetails);
+        // Function to show feedback
+        const showFeedback = (message, isSuccess = true) => {
+            copyFeedback.textContent = message;
+            copyFeedback.className = `copy-feedback ${isSuccess ? 'success' : 'error'}`;
             
-            // Show success feedback
-            copyFeedback.textContent = 'Package details copied to clipboard!';
-            copyFeedback.className = 'copy-feedback success';
-            
-            // Clear feedback after 3 seconds
             setTimeout(() => {
                 copyFeedback.textContent = '';
                 copyFeedback.className = 'copy-feedback';
             }, 3000);
-        } catch (err) {
-            // Fallback for browsers that don't support clipboard API
-            const textArea = document.createElement('textarea');
-            textArea.value = currentPackageDetails;
-            textArea.style.position = 'fixed';
-            textArea.style.opacity = '0';
-            document.body.appendChild(textArea);
-            textArea.select();
-            
+        };
+
+        // Try modern Clipboard API first
+        if (navigator.clipboard && window.isSecureContext) {
             try {
-                document.execCommand('copy');
-                copyFeedback.textContent = 'Package details copied to clipboard!';
-                copyFeedback.className = 'copy-feedback success';
+                await navigator.clipboard.writeText(currentPackageDetails);
+                showFeedback('Package details copied to clipboard!');
+                return;
             } catch (err) {
-                copyFeedback.textContent = 'Failed to copy. Please try again.';
-                copyFeedback.className = 'copy-feedback error';
+                console.warn('Clipboard API failed, trying fallback:', err);
             }
-            
-            document.body.removeChild(textArea);
-            
-            // Clear feedback after 3 seconds
-            setTimeout(() => {
-                copyFeedback.textContent = '';
-                copyFeedback.className = 'copy-feedback';
-            }, 3000);
+        }
+        
+        // Fallback method using textarea
+        const textArea = document.createElement('textarea');
+        textArea.value = currentPackageDetails;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        textArea.setAttribute('readonly', '');
+        document.body.appendChild(textArea);
+        
+        // Save current selection if any
+        const selected = document.getSelection().rangeCount > 0
+            ? document.getSelection().getRangeAt(0)
+            : false;
+        
+        // Select and copy
+        textArea.select();
+        textArea.setSelectionRange(0, 99999); // For mobile devices
+        
+        let success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (err) {
+            console.error('Copy command failed:', err);
+        }
+        
+        // Restore original selection
+        if (selected) {
+            document.getSelection().removeAllRanges();
+            document.getSelection().addRange(selected);
+        }
+        
+        document.body.removeChild(textArea);
+        
+        if (success) {
+            showFeedback('Package details copied to clipboard!');
+        } else {
+            showFeedback('Failed to copy. Please try selecting and copying manually.', false);
         }
     });
 });
