@@ -274,8 +274,8 @@
 /* Mobile Responsive for Calculator */
 @media (max-width: 768px) {
     .calculator-section {
-        padding: 1.5rem;
-        margin: 2rem 0;
+        padding: 1.25rem;
+        margin: 0.5rem;
     }
 
     .calculator-section h2 {
@@ -314,7 +314,7 @@
     }
 
     .calculator-summary {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .summary-total {
