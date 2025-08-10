@@ -26,8 +26,10 @@
     <meta name="twitter:image" content="https://blastoffrails.com/assets/images/backgrounds/social.png">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sponsor-calculator.css">
     <script src="assets/js/mobile-menu.js"></script>
     <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/sponsor-calculator.js"></script>
 </head>
 <body>
     <header>
@@ -80,10 +82,146 @@
 
             <h1>Sponsor</h1>
             <p class="intro-text">Join as a sponsor and connect with passionate Ruby on Rails developers! Your support helps make Blastoff Rails an incredible experience for our community.</p>
-            <p class="intro-text">If you would like to support the conference please consider purchasing supporter tickets or send me an email.</p>
+
+            <!-- Sponsorship Package Calculator -->
+            <div class="calculator-section">
+                <h2>Build Your Sponsorship Package</h2>
+                <p class="calculator-intro">Customize your sponsorship to meet your needs and budget</p>
+
+                <!-- Tier Selection -->
+                <div class="tier-selection">
+                    <h3>Select Your Base Tier</h3>
+                    <div class="tier-cards">
+                        <div class="tier-card" data-tier="1">
+                            <input type="radio" name="tier" id="tier1" value="1" checked>
+                            <label for="tier1">
+                                <h4>Tier 1</h4>
+                                <div class="tier-price">$1,875</div>
+                                <ul class="tier-perks">
+                                    <li>Logo on conference site (Small)</li>
+                                    <li>1 ticket included</li>
+                                    <li>1 social media promo</li>
+                                </ul>
+                            </label>
+                        </div>
+                        <div class="tier-card" data-tier="2">
+                            <input type="radio" name="tier" id="tier2" value="2">
+                            <label for="tier2">
+                                <h4>Tier 2</h4>
+                                <div class="tier-price">$3,375</div>
+                                <ul class="tier-perks">
+                                    <li>Logo on conference site (Medium)</li>
+                                    <li>3 tickets included</li>
+                                    <li>2 social media promos</li>
+                                </ul>
+                            </label>
+                        </div>
+                        <div class="tier-card" data-tier="3">
+                            <input type="radio" name="tier" id="tier3" value="3">
+                            <label for="tier3">
+                                <h4>Tier 3</h4>
+                                <div class="tier-price">$6,125</div>
+                                <ul class="tier-perks">
+                                    <li>Logo on conference site (Large)</li>
+                                    <li>6 tickets included</li>
+                                    <li>3 social media promos</li>
+                                </ul>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-ons Section -->
+                <div class="addons-section">
+                    <h3>Enhance Your Package</h3>
+                    <div class="addons-grid">
+                        <div class="addon-item">
+                            <input type="checkbox" id="exhibition" name="exhibition">
+                            <label for="exhibition">
+                                <span class="addon-name">
+                                    Exhibition Space
+                                    <span class="info-icon" data-tooltip="A six foot table placed in our big conference room where all the action happens.">ⓘ</span>
+                                </span>
+                                <span class="addon-price">$1,500</span>
+                            </label>
+                        </div>
+                        <div class="addon-item">
+                            <input type="checkbox" id="lightning" name="lightning">
+                            <label for="lightning">
+                                <span class="addon-name">
+                                    Lightning Talk
+                                    <span class="info-icon" data-tooltip="Five to ten minutes on stage to talk about whatever you like.">ⓘ</span>
+                                </span>
+                                <span class="addon-price">$1,500</span>
+                            </label>
+                        </div>
+                        <div class="addon-item">
+                            <input type="checkbox" id="dedicated-email" name="dedicated-email">
+                            <label for="dedicated-email">
+                                <span class="addon-name">
+                                    Dedicated Email to Attendees
+                                    <span class="info-icon" data-tooltip="An email to all our attendees about whatever you like on the date that you wish.">ⓘ</span>
+                                </span>
+                                <span class="addon-price">$1,000</span>
+                            </label>
+                        </div>
+                        <div class="addon-item">
+                            <input type="checkbox" id="email-mention" name="email-mention">
+                            <label for="email-mention">
+                                <span class="addon-name">
+                                    Mention in Regular Emails
+                                    <span class="info-icon" data-tooltip="A small section in every email update that we send to attendees.">ⓘ</span>
+                                </span>
+                                <span class="addon-price">$400</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quantity-addons">
+                        <div class="quantity-addon">
+                            <label for="extra-tickets">
+                                <span class="addon-name">Additional Tickets</span>
+                                <span class="addon-price">$200 each</span>
+                            </label>
+                            <input type="number" id="extra-tickets" name="extra-tickets" min="0" value="0">
+                        </div>
+                        <div class="quantity-addon">
+                            <label for="extra-social">
+                                <span class="addon-name">Additional Social Media Promotions</span>
+                                <span class="addon-price">$800 each</span>
+                            </label>
+                            <input type="number" id="extra-social" name="extra-social" min="0" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Section -->
+                <div class="calculator-summary">
+                    <h3>Your Package Summary</h3>
+                    <div class="summary-content">
+                        <div class="summary-tier">
+                            <span>Base Tier: <strong id="summary-tier-name">Tier 1</strong></span>
+                            <span id="summary-tier-price">$1,875</span>
+                        </div>
+                        <div id="summary-addons"></div>
+                        <div class="summary-total">
+                            <span>Total Investment:</span>
+                            <span id="total-price">$1,875</span>
+                        </div>
+                    </div>
+                    <div class="calculator-cta">
+                        <p>Ready to become a sponsor with this package?</p>
+                        <div class="cta-buttons">
+                            <a href="mailto:travis@blastoffrails.com?subject=Sponsorship%20Package%20Inquiry" class="cta-button" id="sponsor-email-link">Get Started</a>
+                            <button class="cta-button secondary" id="copy-package-details">Copy Package Details</button>
+                        </div>
+                        <div id="copy-feedback" class="copy-feedback"></div>
+                    </div>
+                </div>
+            </div>
 
             <div class="sponsor-cta">
-                <h2>Interested in Sponsoring?</h2>
+                <h2>Need something different?</h2>
                 <a href="mailto:travis@blastoffrails.com" class="cta-button">Get in Touch</a>
             </div>
         </div>

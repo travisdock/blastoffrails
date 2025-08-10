@@ -92,7 +92,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* Hero Section (Home Page) */
@@ -477,6 +477,7 @@ p.footer-disclaimer {
     transform: translateY(-2px);
 }
 
+
 /* Mobile Responsive for Sponsor Page */
 @media (max-width: 768px) {
     .page-content {
@@ -821,7 +822,7 @@ body:has(.container) main {
 /* Mobile Responsive for Travel Page */
 @media (max-width: 768px) {
     .page-content {
-        padding: 1rem;
+        padding: 0rem;
         max-width: 100%;
     }
     
