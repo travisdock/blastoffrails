@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Add extra tickets
-        const extraTickets = parseInt(extraTicketsInput.value) || 0;
+        const extraTickets = parseInt(extraTicketsInput.value, 10) || 0;
         if (extraTickets > 0) {
             const ticketCost = extraTickets * addonPricing['extra-tickets'].price;
             total += ticketCost;
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Add extra social media promotions
-        const extraSocial = parseInt(extraSocialInput.value) || 0;
+        const extraSocial = parseInt(extraSocialInput.value, 10) || 0;
         if (extraSocial > 0) {
             const socialCost = extraSocial * addonPricing['extra-social'].price;
             total += socialCost;
