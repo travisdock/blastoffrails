@@ -112,6 +112,7 @@
 }
 
 .addon-item {
+    position: relative;
     background-color: var(--bg);
     border: 2px solid var(--border);
     border-radius: 8px;
@@ -124,9 +125,8 @@
 }
 
 .addon-item input[type="checkbox"] {
-    margin-right: 1rem;
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -135,9 +135,41 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    width: 100%;
 }
 
-.addon-item input[type="checkbox"]:checked + label {
+.addon-item label::before {
+    content: "";
+    position: absolute;
+    left: 1.5rem;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--bg-alt);
+    transition: all 0.3s ease;
+}
+
+.addon-item input[type="checkbox"]:checked + label::before {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.addon-item input[type="checkbox"]:checked + label::after {
+    content: "✓";
+    position: absolute;
+    left: 1.5rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-alt);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.addon-item input[type="checkbox"]:checked + label .addon-name {
     color: var(--primary);
     font-weight: 600;
 }
@@ -145,12 +177,80 @@
 .addon-name {
     flex: 1;
     color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 2rem;
 }
 
 .addon-price {
     color: var(--secondary);
     font-weight: 600;
     font-size: 1.125rem;
+}
+
+/* Info Icon and Tooltip */
+.info-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: help;
+    transition: background-color 0.3s ease;
+}
+
+.info-icon:hover {
+    background-color: var(--primary);
+    color: var(--bg-alt);
+}
+
+.info-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-dark);
+    color: var(--bg-alt);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: normal;
+    white-space: normal;
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--text-dark);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.info-icon:hover::after,
+.info-icon:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Quantity Add-ons */
@@ -269,6 +369,23 @@
 
 .copy-feedback.error {
     color: var(--border);
+}
+
+/* Mobile adjustments for tooltips */
+@media (max-width: 768px) {
+    .info-icon::after {
+        width: 150px;
+        font-size: 0.8rem;
+        bottom: auto;
+        top: 125%;
+    }
+    
+    .info-icon::before {
+        bottom: auto;
+        top: 100%;
+        border-top-color: transparent;
+        border-bottom-color: var(--text-dark);
+    }
 }
 
 /* Mobile Responsive for Calculator */
