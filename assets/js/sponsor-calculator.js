@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Pricing Configuration
     const tierPricing = {
         1: {
-            price: 1875,
+            price: 1250,
             name: 'Tier 1',
             tickets: 1,
             socialPromos: 1
         },
         2: {
-            price: 3375,
+            price: 2500,
             name: 'Tier 2',
             tickets: 3,
             socialPromos: 2
         },
         3: {
-            price: 6125,
+            price: 4000,
             name: 'Tier 3',
             tickets: 6,
             socialPromos: 3
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const addonPricing = {
-        exhibition: { price: 1500, name: 'Exhibition Space' },
-        lightning: { price: 1500, name: 'Lightning Talk' },
-        'dedicated-email': { price: 1000, name: 'Dedicated Email to Attendees' },
+        exhibition: { price: 1000, name: 'Exhibition Space' },
+        lightning: { price: 1000, name: 'Lightning Talk' },
+        'dedicated-email': { price: 600, name: 'Dedicated Email to Attendees' },
         'email-mention': { price: 400, name: 'Mention in Regular Emails' },
         'extra-tickets': { price: 200, name: 'Additional Tickets' },
-        'extra-social': { price: 800, name: 'Additional Social Media Promotions' }
+        'extra-social': { price: 600, name: 'Additional Social Media Promotions' }
     };
 
     // DOM Elements
