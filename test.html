@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Subscribe</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </head>
+  <body>
+    <form id="subscribe-form">
+      <input type="email" name="email" placeholder="Your email" required />
+
+      <!-- Turnstile widget -->
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAABwHLPE6QUw-A9qj"></div>
+
+      <!-- Hardcoded group -->
+      <input type="hidden" name="group" value="newsletter" />
+
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+      const form = document.getElementById("subscribe-form");
+      const message = document.getElementById("message");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = form.email.value;
+        const group = form.group.value;
+
+        // Turnstile auto-injects a hidden input called "cf-turnstile-response"
+        const tokenInput = form.querySelector('input[name="cf-turnstile-response"]');
+        const token = tokenInput ? tokenInput.value : null;
+
+        if (!token) {
+          message.textContent = "Bot check failed. Please try again.";
+          return;
+        }
+
+        const res = await fetch("https://mailerlite-api.travisdock.workers.dev/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, token, group }),
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          message.textContent = "✅ Thanks for subscribing!";
+        } else {
+          message.textContent = "❌ Error: " + data.error;
+        }
+      });
+    </script>
+  </body>
+</html>
+
