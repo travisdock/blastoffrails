@@ -1,4 +1,110 @@
+// ========================================
+// ANALYTICS MODULE
+// ========================================
+(function() {
+  if (window.location.hostname === 'localhost' || 
+      window.location.hostname === '127.0.0.1' || 
+      window.location.hostname.startsWith('192.168.') ||
+      window.location.hostname.startsWith('10.') ||
+      window.location.hostname === '::1') {
+    console.log('Travalytics: Skipping tracking on localhost');
+    return;
+  }
+  const script = document.createElement('script');
+  script.src = 'https://travserve.net/analytics.js';
+  script.setAttribute('data-tracking-id', '0543527a-695b-488a-8152-1341efef043f');
+  script.setAttribute('data-endpoint', 'https://travserve.net');
+  script.async = true;
+  document.head.appendChild(script);
+})();
+
+// ========================================
+// MOBILE MENU MODULE
+// ========================================
 document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // Toggle active class on both button and nav links
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Update aria-expanded attribute for accessibility
+            const isExpanded = navLinks.classList.contains('active');
+            mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', false);
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', false);
+            }
+        });
+        
+        // Close mobile menu on window resize if it's open
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', false);
+            }
+        });
+    }
+});
+
+// ========================================
+// EMAIL SUBSCRIPTION MODULE
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const tsField = document.getElementById("ts");
+    if (tsField) {
+        tsField.value = Date.now();
+    }
+
+    const subscribeForm = document.getElementById("subscribe-form");
+    if (subscribeForm) {
+        subscribeForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const email = form.email.value;
+            const website = form.website.value;
+            const ts = form.ts.value;
+
+            const res = await fetch("https://mailerlite-api.travisdock.workers.dev/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, ts, website }),
+            });
+
+            const data = await res.json();
+            const message = document.getElementById("subscribe-message");
+            message.textContent = res.ok ? "✅ Thanks for subscribing!" : "❌ Error: " + data.error;
+        });
+    }
+});
+
+// ========================================
+// SPONSOR CALCULATOR MODULE
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Skip if not on sponsor page
+    if (!document.getElementById('sponsor-calculator')) return;
+
     // Pricing Configuration
     const tierPricing = {
         1: {
