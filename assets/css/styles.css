@@ -600,12 +600,26 @@ p.footer-disclaimer {
     border: 3px solid var(--border);
     border-radius: 12px;
     padding: 2.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.ticket-card:visited,
+.ticket-card:hover,
+.ticket-card:active,
+.ticket-card:focus {
+    text-decoration: none;
+    color: inherit;
 }
 
 .ticket-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(84, 41, 30, 0.2);
+    border-color: var(--primary);
+    background-color: rgba(233, 112, 45, 0.06);
 }
 
 .ticket-card h3 {
