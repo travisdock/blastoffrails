@@ -104,7 +104,6 @@ main {
 .hero h1 {
     font-size: 5rem;
     color: var(--primary);
-    margin-bottom: 2rem;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -342,33 +341,6 @@ p.footer-disclaimer {
     .coming-soon {
         font-size: 1.5rem;
     }
-}
-
-.rocket-text {
-  animation: rocketLaunch 1.5s ease-out forwards;
-  transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
-  opacity: 0;
-  margin-bottom: 0rem !important;
-}
-
-@keyframes rocketLaunch {
-  0% {
-    transform: translateY(100vh) translateX(-50vw) rotate(-45deg);
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-20px) translateX(10px) rotate(-10deg);
-  }
-  85% {
-    transform: translateY(10px) translateX(-5px) rotate(5deg);
-  }
-  100% {
-    transform: translateY(0) translateX(0) rotate(0deg);
-    opacity: 1;
-  }
 }
 
 /* Subscribe Section */
