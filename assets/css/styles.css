@@ -611,6 +611,13 @@ p.footer-disclaimer {
         max-width: 100%;
     }
 
+    .sponsor-grid-bottom .sponsor-slot img {
+        height: auto;
+        max-height: 35px;
+        width: auto;
+        max-width: 100%;
+    }
+
     .sponsor-slot a {
         padding: 1rem;
     }
