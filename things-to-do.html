@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel - Blastoff Rails</title>
+    <title>Things to Do - Blastoff Rails</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-96x96.png">
     <meta name="theme-color" content="#e9702d">
 
     <!-- Open Graph metadata -->
-    <meta property="og:title" content="Travel Information - Blastoff Rails">
-    <meta property="og:description" content="Plan your trip to Blastoff Rails in Albuquerque, New Mexico. Find hotels, transportation, and local attractions">
+    <meta property="og:title" content="Things to Do in Albuquerque - Blastoff Rails">
+    <meta property="og:description" content="Discover amazing activities, restaurants, and attractions in Albuquerque during Blastoff Rails">
     <meta property="og:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
-    <meta property="og:url" content="https://blastoffrails.com/travel.html">
+    <meta property="og:url" content="https://blastoffrails.com/things-to-do.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Blastoff Rails">
 
     <!-- Twitter Card metadata -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Travel Information - Blastoff Rails">
-    <meta name="twitter:description" content="Plan your trip to Blastoff Rails in Albuquerque, New Mexico. Find hotels, transportation, and local attractions">
+    <meta name="twitter:title" content="Things to Do in Albuquerque - Blastoff Rails">
+    <meta name="twitter:description" content="Discover amazing activities, restaurants, and attractions in Albuquerque during Blastoff Rails">
     <meta name="twitter:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/things-to-do.css">
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/typesense-search.js" defer></script>
 </head>
 <body>
     <header>
@@ -37,8 +39,8 @@
                 </button>
                 <ul class="nav-links">
                     <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="travel.html" class="active">Travel</a></li>
-                    <li><a href="things-to-do.html">Things to Do</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="things-to-do.html" class="active">Things to Do</a></li>
                     <li><a href="speakers.html">Speakers</a></li>
                     <li><a href="sponsor.html">Sponsor</a></li>
                     <li><a href="about.html">About</a></li>
@@ -49,61 +51,60 @@
 
     <main>
         <div class="page-content">
-            <h1>Travel Information</h1>
-            
-            <section class="travel-section">
-                <h2>Venue</h2>
-                <div class="venue-info">
-                    <h3>Albuquerque Museum</h3>
-                    <p>2000 Mountain Rd NW, Albuquerque, NM 87104</p>
-                    <a href="https://www.cabq.gov/artsculture/albuquerque-museum/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Museum Website →</a>
+            <h1>Things to Do in Albuquerque</h1>
+            <p class="intro-text">Explore the best of Albuquerque during your visit! Search for outdoor activities, dining, and attractions.</p>
+
+            <!-- Typesense Sponsor Attribution -->
+            <div class="sponsor-attribution">
+                <span>Search powered by</span>
+                <a href="https://typesense.org" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/sponsors/typesense_logo.svg" alt="Typesense" class="typesense-logo">
+                </a>
+            </div>
+
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input
+                        type="search"
+                        id="activity-search"
+                        placeholder="Try 'outdoor hiking' or 'green chile' or 'family museums'..."
+                        aria-label="Search for activities"
+                    >
+                    <button id="search-button" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="Outdoor Activities">Outdoor</button>
+                    <button class="filter-btn" data-category="Food & Dining">Food & Dining</button>
+                    <button class="filter-btn" data-category="Arts & Culture">Arts & Culture</button>
                 </div>
             </section>
 
-            <section class="travel-section">
-                <h2>Hotels</h2>
-                <div class="hotels-list">
-                    <div class="hotel-card">
-                        <h3>Hotel Albuquerque</h3>
-                        <p class="distance">6 minute walk from venue</p>
-                        <p class="price">$250 - $300 per night</p>
-                        <div class="hotel-perks">
-                            <p><strong>Perks:</strong></p>
-                            <ul>
-                                <li>Closest hotel to the venue</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.hotelabq.com/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Hotel Website →</a>
-                    </div>
-                    <div class="hotel-card">
-                        <h3>Best Western Rio Grande Inn</h3>
-                        <p class="distance">12 minute walk from venue</p>
-                        <p class="price">$150 - $200 per night</p>
-                        <div class="hotel-perks">
-                            <p><strong>Perks:</strong></p>
-                            <ul>
-                                <li>Free shuttle from airport</li>
-                            </ul>
-                        </div>
-                        <a href="https://riograndeinn.com/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Hotel Website →</a>
-                    </div>
+            <!-- Results Section -->
+            <section class="results-section">
+                <div id="results-count" class="results-count"></div>
+                <div id="activity-results" class="activity-grid">
+                    <!-- Results populated by JavaScript -->
                 </div>
-            </section>
-
-            <section class="travel-section">
-                <h2>Food Options</h2>
-                <div class="food-list">
-                    <div class="food-item">
-                        <h3>Sawmill Market</h3>
-                        <p class="distance">8 minute walk from venue</p>
-                        <p>A vibrant food hall featuring local vendors and diverse dining options.</p>
-                        <a href="https://www.sawmillmarket.com/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Sawmill Market →</a>
-                    </div>
+                <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Searching...</p>
+                </div>
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p>No activities found. Try a different search term!</p>
                 </div>
             </section>
         </div>
     </main>
-    
+
     <footer>
         <div class="footer-container">
             <p>Organized by Travis
