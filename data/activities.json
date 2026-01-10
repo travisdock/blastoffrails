@@ -5,14 +5,34 @@
     "description": "Experience the world's longest aerial tramway with a 2.7-mile ride to the 10,378-foot summit of the Sandia Mountains. Perfect for hiking, stunning panoramic views, and memorable sunsets. Great for outdoor enthusiasts and nature lovers seeking adventure near Albuquerque.",
     "category": "Outdoor Activities",
     "subcategory": "Scenic Attractions",
-    "tags": ["hiking", "nature", "scenic views", "mountains", "sunset", "adventure", "photography", "outdoor", "tramway"],
+    "tags": [
+      "hiking",
+      "nature",
+      "scenic views",
+      "mountains",
+      "sunset",
+      "adventure",
+      "photography",
+      "outdoor",
+      "tramway"
+    ],
     "address": "30 Tramway Rd NE, Albuquerque, NM 87122",
     "neighborhood": "Northeast Heights",
     "price_range": "$$",
     "website_url": "https://sandiapeak.com",
+    "image_url": "assets/images/activities/sandia-peak-tramway-badge.webp",
     "distance_from_venue": "25 minute drive",
-    "highlights": ["World's longest aerial tramway", "10,378-foot summit views", "Hiking trails at summit"],
-    "best_for": ["families", "nature lovers", "photographers", "adventure seekers"]
+    "highlights": [
+      "World's longest aerial tramway",
+      "10,378-foot summit views",
+      "Hiking trails at summit"
+    ],
+    "best_for": [
+      "families",
+      "nature lovers",
+      "photographers",
+      "adventure seekers"
+    ]
   },
   {
     "id": "old-town-albuquerque",
@@ -20,14 +40,33 @@
     "description": "Explore the historic heart of Albuquerque with adobe architecture, unique shops, galleries, and authentic New Mexican restaurants. Founded in 1706, it's the perfect place to experience local culture, history, and southwestern charm.",
     "category": "Arts & Culture",
     "subcategory": "Historic Districts",
-    "tags": ["history", "shopping", "architecture", "galleries", "culture", "walking", "historic", "adobe"],
+    "tags": [
+      "history",
+      "shopping",
+      "architecture",
+      "galleries",
+      "culture",
+      "walking",
+      "historic",
+      "adobe"
+    ],
     "address": "Old Town, Albuquerque, NM 87104",
     "neighborhood": "Old Town",
     "price_range": "Free",
     "website_url": "https://www.albuquerqueoldtown.com",
     "distance_from_venue": "5 minute walk",
-    "highlights": ["San Felipe de Neri Church (1793)", "200+ shops and galleries", "Adobe architecture"],
-    "best_for": ["history buffs", "shoppers", "photographers", "everyone"]
+    "highlights": [
+      "San Felipe de Neri Church (1793)",
+      "200+ shops and galleries",
+      "Adobe architecture"
+    ],
+    "best_for": [
+      "history buffs",
+      "shoppers",
+      "photographers",
+      "everyone"
+    ],
+    "image_url": "assets/images/activities/old-town-albuquerque-badge.webp"
   },
   {
     "id": "frontier-restaurant",
@@ -35,14 +74,31 @@
     "description": "Iconic Albuquerque restaurant serving New Mexican favorites since 1971. Famous for their sweet cinnamon rolls, green chile stew, and breakfast burritos. A beloved local institution near UNM that's perfect for budget-friendly authentic cuisine.",
     "category": "Food & Dining",
     "subcategory": "New Mexican Cuisine",
-    "tags": ["breakfast", "green chile", "local favorite", "casual", "budget-friendly", "burritos", "cinnamon rolls"],
+    "tags": [
+      "breakfast",
+      "green chile",
+      "local favorite",
+      "casual",
+      "budget-friendly",
+      "burritos",
+      "cinnamon rolls"
+    ],
     "address": "2400 Central Ave SE, Albuquerque, NM 87106",
     "neighborhood": "University",
     "price_range": "$",
     "website_url": "https://www.frontierrestaurant.com",
     "distance_from_venue": "15 minute drive",
-    "highlights": ["Famous cinnamon rolls", "Open since 1971", "Green chile stew"],
-    "best_for": ["breakfast lovers", "budget travelers", "groups"]
+    "highlights": [
+      "Famous cinnamon rolls",
+      "Open since 1971",
+      "Green chile stew"
+    ],
+    "best_for": [
+      "breakfast lovers",
+      "budget travelers",
+      "groups"
+    ],
+    "image_url": "assets/images/activities/frontier-restaurant-badge.webp"
   },
   {
     "id": "petroglyph-national-monument",
@@ -50,14 +106,33 @@
     "description": "Discover over 24,000 ancient rock carvings along the volcanic escarpment. Easy hiking trails lead to viewing areas with images carved 400-700 years ago by Native Americans and Spanish settlers. A unique outdoor experience combining nature and archaeology.",
     "category": "Outdoor Activities",
     "subcategory": "Hiking",
-    "tags": ["hiking", "history", "petroglyphs", "nature", "archaeology", "native american", "free", "walking"],
+    "tags": [
+      "hiking",
+      "history",
+      "petroglyphs",
+      "nature",
+      "archaeology",
+      "native american",
+      "free",
+      "walking"
+    ],
     "address": "6510 Western Trail NW, Albuquerque, NM 87120",
     "neighborhood": "West Side",
     "price_range": "Free",
     "website_url": "https://www.nps.gov/petr",
     "distance_from_venue": "20 minute drive",
-    "highlights": ["24,000+ petroglyphs", "Easy hiking trails", "Free admission"],
-    "best_for": ["hikers", "history buffs", "families", "photographers"]
+    "highlights": [
+      "24,000+ petroglyphs",
+      "Easy hiking trails",
+      "Free admission"
+    ],
+    "best_for": [
+      "hikers",
+      "history buffs",
+      "families",
+      "photographers"
+    ],
+    "image_url": "assets/images/activities/petroglyph-national-monument-badge.webp"
   },
   {
     "id": "indian-pueblo-cultural-center",
@@ -65,14 +140,32 @@
     "description": "Explore the history and living cultures of New Mexico's 19 Pueblo nations. Features museum exhibits, traditional dance performances, authentic Native American art, and the Pueblo Harvest Cafe serving indigenous cuisine.",
     "category": "Arts & Culture",
     "subcategory": "Museums",
-    "tags": ["museum", "native american", "culture", "art", "history", "dance", "pueblo", "indigenous"],
+    "tags": [
+      "museum",
+      "native american",
+      "culture",
+      "art",
+      "history",
+      "dance",
+      "pueblo",
+      "indigenous"
+    ],
     "address": "2401 12th St NW, Albuquerque, NM 87104",
     "neighborhood": "North Valley",
     "price_range": "$$",
     "website_url": "https://indianpueblo.org",
     "distance_from_venue": "10 minute drive",
-    "highlights": ["19 Pueblo nations represented", "Live dance performances", "Pueblo Harvest Cafe"],
-    "best_for": ["culture enthusiasts", "families", "art lovers"]
+    "highlights": [
+      "19 Pueblo nations represented",
+      "Live dance performances",
+      "Pueblo Harvest Cafe"
+    ],
+    "best_for": [
+      "culture enthusiasts",
+      "families",
+      "art lovers"
+    ],
+    "image_url": "assets/images/activities/indian-pueblo-cultural-center-badge.webp"
   },
   {
     "id": "el-pinto",
@@ -80,14 +173,32 @@
     "description": "Award-winning New Mexican restaurant known for their fresh salsa, spectacular margaritas, and beautiful outdoor patio with string lights. A favorite for authentic red and green chile, enchiladas, and a festive dining atmosphere.",
     "category": "Food & Dining",
     "subcategory": "New Mexican Cuisine",
-    "tags": ["new mexican", "margaritas", "outdoor dining", "salsa", "enchiladas", "chile", "patio", "dinner"],
+    "tags": [
+      "new mexican",
+      "margaritas",
+      "outdoor dining",
+      "salsa",
+      "enchiladas",
+      "chile",
+      "patio",
+      "dinner"
+    ],
     "address": "10500 4th St NW, Albuquerque, NM 87114",
     "neighborhood": "North Valley",
     "price_range": "$$",
     "website_url": "https://www.elpinto.com",
     "distance_from_venue": "20 minute drive",
-    "highlights": ["Famous fresh salsa", "Beautiful patio dining", "Award-winning margaritas"],
-    "best_for": ["dinner", "groups", "outdoor dining enthusiasts"]
+    "highlights": [
+      "Famous fresh salsa",
+      "Beautiful patio dining",
+      "Award-winning margaritas"
+    ],
+    "best_for": [
+      "dinner",
+      "groups",
+      "outdoor dining enthusiasts"
+    ],
+    "image_url": "assets/images/activities/el-pinto-badge.webp"
   },
   {
     "id": "balloon-museum",
@@ -95,14 +206,31 @@
     "description": "World-class museum dedicated to the art, history, and science of ballooning. Interactive exhibits, historic balloon gondolas, and the story of Albuquerque's famous Balloon Fiesta. Fun for families and aviation enthusiasts alike.",
     "category": "Arts & Culture",
     "subcategory": "Museums",
-    "tags": ["museum", "balloons", "aviation", "interactive", "family-friendly", "science", "balloon fiesta"],
+    "tags": [
+      "museum",
+      "balloons",
+      "aviation",
+      "interactive",
+      "family-friendly",
+      "science",
+      "balloon fiesta"
+    ],
     "address": "9201 Balloon Museum Dr NE, Albuquerque, NM 87113",
     "neighborhood": "Northeast Heights",
     "price_range": "$",
     "website_url": "https://www.balloonmuseum.com",
     "distance_from_venue": "20 minute drive",
-    "highlights": ["Interactive exhibits", "Historic balloon gondolas", "Beautiful architecture"],
-    "best_for": ["families", "aviation enthusiasts", "photography"]
+    "highlights": [
+      "Interactive exhibits",
+      "Historic balloon gondolas",
+      "Beautiful architecture"
+    ],
+    "best_for": [
+      "families",
+      "aviation enthusiasts",
+      "photography"
+    ],
+    "image_url": "assets/images/activities/balloon-museum-badge.webp"
   },
   {
     "id": "bosque-trail",
@@ -110,14 +238,34 @@
     "description": "16-mile paved multi-use trail along the Rio Grande through the cottonwood forest (bosque). Perfect for morning walks, running, or biking with excellent bird watching opportunities and peaceful river views.",
     "category": "Outdoor Activities",
     "subcategory": "Walking & Biking",
-    "tags": ["biking", "walking", "running", "nature", "rio grande", "birds", "trail", "exercise", "free"],
+    "tags": [
+      "biking",
+      "walking",
+      "running",
+      "nature",
+      "rio grande",
+      "birds",
+      "trail",
+      "exercise",
+      "free"
+    ],
     "address": "Various access points along the Rio Grande",
     "neighborhood": "Valley",
     "price_range": "Free",
     "website_url": "https://www.cabq.gov/parksandrecreation/open-space/lands/paseo-del-bosque-trail",
     "distance_from_venue": "10 minute walk",
-    "highlights": ["16 miles of paved trail", "Cottonwood forest scenery", "Bird watching"],
-    "best_for": ["runners", "cyclists", "nature lovers", "morning exercise"]
+    "highlights": [
+      "16 miles of paved trail",
+      "Cottonwood forest scenery",
+      "Bird watching"
+    ],
+    "best_for": [
+      "runners",
+      "cyclists",
+      "nature lovers",
+      "morning exercise"
+    ],
+    "image_url": "assets/images/activities/bosque-trail-badge.webp"
   },
   {
     "id": "tinkertown-museum",
@@ -125,14 +273,31 @@
     "description": "Quirky roadside attraction featuring hand-carved miniature western town and circus, plus a collection of Americana oddities. A one-of-a-kind folk art experience that took creator Ross Ward 40 years to build.",
     "category": "Arts & Culture",
     "subcategory": "Museums",
-    "tags": ["folk art", "quirky", "unique", "roadside attraction", "miniatures", "americana", "family-friendly"],
+    "tags": [
+      "folk art",
+      "quirky",
+      "unique",
+      "roadside attraction",
+      "miniatures",
+      "americana",
+      "family-friendly"
+    ],
     "address": "121 Sandia Crest Rd, Sandia Park, NM 87047",
     "neighborhood": "East Mountains",
     "price_range": "$",
     "website_url": "https://tinkertown.com",
     "distance_from_venue": "30 minute drive",
-    "highlights": ["Hand-carved miniature town", "40 years in the making", "Unique folk art"],
-    "best_for": ["families", "art lovers", "quirky adventure seekers"]
+    "highlights": [
+      "Hand-carved miniature town",
+      "40 years in the making",
+      "Unique folk art"
+    ],
+    "best_for": [
+      "families",
+      "art lovers",
+      "quirky adventure seekers"
+    ],
+    "image_url": "assets/images/activities/tinkertown-museum-badge.webp"
   },
   {
     "id": "meow-wolf",
@@ -140,14 +305,32 @@
     "description": "Immersive, interactive art installation housed in a converted bowling alley. Explore a mysterious Victorian house with secret passages, portals to other dimensions, and mind-bending art experiences. A must-see Santa Fe day trip.",
     "category": "Arts & Culture",
     "subcategory": "Immersive Art",
-    "tags": ["art", "interactive", "immersive", "unique", "instagram", "family-friendly", "santa fe"],
+    "tags": [
+      "art",
+      "interactive",
+      "immersive",
+      "unique",
+      "instagram",
+      "family-friendly",
+      "santa fe"
+    ],
     "address": "1352 Rufina Circle, Santa Fe, NM 87507",
     "neighborhood": "Santa Fe",
     "price_range": "$$",
     "website_url": "https://meowwolf.com/visit/santa-fe",
     "distance_from_venue": "1 hour drive",
-    "highlights": ["Immersive art experience", "Secret passages and portals", "Instagram-worthy"],
-    "best_for": ["art lovers", "families", "instagram enthusiasts", "adventure seekers"]
+    "highlights": [
+      "Immersive art experience",
+      "Secret passages and portals",
+      "Instagram-worthy"
+    ],
+    "best_for": [
+      "art lovers",
+      "families",
+      "instagram enthusiasts",
+      "adventure seekers"
+    ],
+    "image_url": "assets/images/activities/meow-wolf-badge.webp"
   },
   {
     "id": "tractor-brewing",
@@ -155,14 +338,31 @@
     "description": "Local craft brewery with multiple locations featuring New Mexico-inspired beers, food trucks, and dog-friendly patios. Known for their farm-to-tap philosophy and community-focused atmosphere.",
     "category": "Food & Dining",
     "subcategory": "Breweries",
-    "tags": ["craft beer", "brewery", "local", "patio", "dog-friendly", "food trucks", "casual"],
+    "tags": [
+      "craft beer",
+      "brewery",
+      "local",
+      "patio",
+      "dog-friendly",
+      "food trucks",
+      "casual"
+    ],
     "address": "118 Tulane Dr SE, Albuquerque, NM 87106",
     "neighborhood": "Nob Hill",
     "price_range": "$",
     "website_url": "https://getplowed.com",
     "distance_from_venue": "15 minute drive",
-    "highlights": ["Local craft beer", "Dog-friendly patio", "Food truck rotation"],
-    "best_for": ["beer lovers", "casual hangouts", "dog owners"]
+    "highlights": [
+      "Local craft beer",
+      "Dog-friendly patio",
+      "Food truck rotation"
+    ],
+    "best_for": [
+      "beer lovers",
+      "casual hangouts",
+      "dog owners"
+    ],
+    "image_url": "assets/images/activities/tractor-brewing-badge.webp"
   },
   {
     "id": "rio-grande-nature-center",
@@ -170,14 +370,32 @@
     "description": "Peaceful nature preserve along the Rio Grande with walking trails through the bosque, a visitor center with wildlife viewing areas, and educational exhibits. Perfect for bird watching and quiet nature walks.",
     "category": "Outdoor Activities",
     "subcategory": "Nature & Wildlife",
-    "tags": ["nature", "birds", "wildlife", "walking", "peaceful", "educational", "family-friendly"],
+    "tags": [
+      "nature",
+      "birds",
+      "wildlife",
+      "walking",
+      "peaceful",
+      "educational",
+      "family-friendly"
+    ],
     "address": "2901 Candelaria Rd NW, Albuquerque, NM 87107",
     "neighborhood": "North Valley",
     "price_range": "$",
     "website_url": "https://www.rgnc.org",
     "distance_from_venue": "15 minute drive",
-    "highlights": ["Wildlife viewing areas", "Bosque trails", "Educational exhibits"],
-    "best_for": ["bird watchers", "nature lovers", "families", "photographers"]
+    "highlights": [
+      "Wildlife viewing areas",
+      "Bosque trails",
+      "Educational exhibits"
+    ],
+    "best_for": [
+      "bird watchers",
+      "nature lovers",
+      "families",
+      "photographers"
+    ],
+    "image_url": "assets/images/activities/rio-grande-nature-center-badge.webp"
   },
   {
     "id": "level-5",
@@ -185,14 +403,31 @@
     "description": "Upscale rooftop dining at Hotel Chaco with stunning views of Old Town and the Sandia Mountains. Features elevated New Mexican cuisine, craft cocktails, and beautiful sunset views.",
     "category": "Food & Dining",
     "subcategory": "Fine Dining",
-    "tags": ["rooftop", "views", "upscale", "cocktails", "sunset", "new mexican", "date night"],
+    "tags": [
+      "rooftop",
+      "views",
+      "upscale",
+      "cocktails",
+      "sunset",
+      "new mexican",
+      "date night"
+    ],
     "address": "2000 Bellamah Ave NW, Albuquerque, NM 87104",
     "neighborhood": "Old Town",
     "price_range": "$$$",
     "website_url": "https://www.hotelchaco.com/eat-drink/level-5",
     "distance_from_venue": "5 minute walk",
-    "highlights": ["Rooftop views", "Craft cocktails", "Sunset dining"],
-    "best_for": ["date night", "special occasions", "sunset lovers"]
+    "highlights": [
+      "Rooftop views",
+      "Craft cocktails",
+      "Sunset dining"
+    ],
+    "best_for": [
+      "date night",
+      "special occasions",
+      "sunset lovers"
+    ],
+    "image_url": "assets/images/activities/level-5-badge.webp"
   },
   {
     "id": "elena-gallegos-open-space",
@@ -200,14 +435,32 @@
     "description": "Popular hiking and mountain biking area at the base of the Sandia Mountains. Multiple trails ranging from easy to challenging with stunning views of the city. Great for a quick outdoor escape.",
     "category": "Outdoor Activities",
     "subcategory": "Hiking",
-    "tags": ["hiking", "mountain biking", "trails", "views", "nature", "exercise", "outdoor"],
+    "tags": [
+      "hiking",
+      "mountain biking",
+      "trails",
+      "views",
+      "nature",
+      "exercise",
+      "outdoor"
+    ],
     "address": "7100 Tramway Blvd NE, Albuquerque, NM 87122",
     "neighborhood": "Northeast Heights",
     "price_range": "$",
     "website_url": "https://www.cabq.gov/parksandrecreation/open-space/lands/elena-gallegos-open-space",
     "distance_from_venue": "20 minute drive",
-    "highlights": ["Multiple trail options", "Mountain views", "Mountain biking allowed"],
-    "best_for": ["hikers", "mountain bikers", "runners", "nature lovers"]
+    "highlights": [
+      "Multiple trail options",
+      "Mountain views",
+      "Mountain biking allowed"
+    ],
+    "best_for": [
+      "hikers",
+      "mountain bikers",
+      "runners",
+      "nature lovers"
+    ],
+    "image_url": "assets/images/activities/elena-gallegos-open-space-badge.webp"
   },
   {
     "id": "range-cafe",
@@ -215,14 +468,30 @@
     "description": "Beloved local restaurant serving comfort food with a New Mexican twist. Known for their incredible breakfast dishes, homemade desserts, and warm, welcoming atmosphere across multiple locations.",
     "category": "Food & Dining",
     "subcategory": "American Comfort Food",
-    "tags": ["breakfast", "comfort food", "local favorite", "desserts", "family-friendly", "brunch"],
+    "tags": [
+      "breakfast",
+      "comfort food",
+      "local favorite",
+      "desserts",
+      "family-friendly",
+      "brunch"
+    ],
     "address": "925 Camino Del Pueblo, Bernalillo, NM 87004",
     "neighborhood": "Bernalillo",
     "price_range": "$$",
     "website_url": "https://www.rangecafe.com",
     "distance_from_venue": "20 minute drive",
-    "highlights": ["Amazing breakfast", "Homemade desserts", "Local favorite"],
-    "best_for": ["breakfast lovers", "families", "comfort food fans"]
+    "highlights": [
+      "Amazing breakfast",
+      "Homemade desserts",
+      "Local favorite"
+    ],
+    "best_for": [
+      "breakfast lovers",
+      "families",
+      "comfort food fans"
+    ],
+    "image_url": "assets/images/activities/range-cafe-badge.webp"
   },
   {
     "id": "albuquerque-museum",
@@ -230,14 +499,30 @@
     "description": "Art and history museum showcasing four centuries of New Mexican culture. Features rotating exhibitions, sculpture garden, and extensive collection of Southwestern art. Free admission on Sunday mornings.",
     "category": "Arts & Culture",
     "subcategory": "Museums",
-    "tags": ["museum", "art", "history", "southwestern", "sculpture garden", "culture"],
+    "tags": [
+      "museum",
+      "art",
+      "history",
+      "southwestern",
+      "sculpture garden",
+      "culture"
+    ],
     "address": "2000 Mountain Rd NW, Albuquerque, NM 87104",
     "neighborhood": "Old Town",
     "price_range": "$",
     "website_url": "https://www.cabq.gov/artsculture/albuquerque-museum",
-    "distance_from_venue": "Same building as venue",
-    "highlights": ["Free Sunday mornings", "Sculpture garden", "Southwestern art collection"],
-    "best_for": ["art lovers", "history buffs", "culture enthusiasts"]
+    "distance_from_venue": "0 minute walk",
+    "highlights": [
+      "Free Sunday mornings",
+      "Sculpture garden",
+      "Southwestern art collection"
+    ],
+    "best_for": [
+      "art lovers",
+      "history buffs",
+      "culture enthusiasts"
+    ],
+    "image_url": "assets/images/activities/albuquerque-museum-badge.webp"
   },
   {
     "id": "tent-rocks",
@@ -245,14 +530,32 @@
     "description": "Stunning cone-shaped rock formations created by volcanic eruptions millions of years ago. A unique hiking experience through slot canyons and to panoramic viewpoints. Truly one-of-a-kind geology.",
     "category": "Outdoor Activities",
     "subcategory": "Hiking",
-    "tags": ["hiking", "geology", "unique", "slot canyon", "photography", "nature", "adventure"],
+    "tags": [
+      "hiking",
+      "geology",
+      "unique",
+      "slot canyon",
+      "photography",
+      "nature",
+      "adventure"
+    ],
     "address": "Forest Road 266, Cochiti Pueblo, NM 87083",
     "neighborhood": "Cochiti Pueblo",
     "price_range": "$",
     "website_url": "https://www.blm.gov/visit/kktr",
     "distance_from_venue": "45 minute drive",
-    "highlights": ["Unique tent rock formations", "Slot canyon trail", "Panoramic views"],
-    "best_for": ["hikers", "photographers", "geology enthusiasts", "adventure seekers"]
+    "highlights": [
+      "Unique tent rock formations",
+      "Slot canyon trail",
+      "Panoramic views"
+    ],
+    "best_for": [
+      "hikers",
+      "photographers",
+      "geology enthusiasts",
+      "adventure seekers"
+    ],
+    "image_url": "assets/images/activities/tent-rocks-badge.webp"
   },
   {
     "id": "durans-station",
@@ -260,43 +563,93 @@
     "description": "Old-school pharmacy lunch counter serving authentic New Mexican food since 1942. Known for their red and green chile, handmade tortillas, and nostalgic atmosphere. A true local gem.",
     "category": "Food & Dining",
     "subcategory": "New Mexican Cuisine",
-    "tags": ["authentic", "local gem", "chile", "lunch counter", "nostalgic", "budget-friendly", "historic"],
+    "tags": [
+      "authentic",
+      "local gem",
+      "chile",
+      "lunch counter",
+      "nostalgic",
+      "budget-friendly",
+      "historic"
+    ],
     "address": "1815 Central Ave NW, Albuquerque, NM 87104",
     "neighborhood": "Downtown",
     "price_range": "$",
     "website_url": null,
     "distance_from_venue": "10 minute walk",
-    "highlights": ["Since 1942", "Authentic chile", "Handmade tortillas"],
-    "best_for": ["local food lovers", "budget travelers", "authentic experience seekers"]
+    "highlights": [
+      "Since 1942",
+      "Authentic chile",
+      "Handmade tortillas"
+    ],
+    "best_for": [
+      "local food lovers",
+      "budget travelers",
+      "authentic experience seekers"
+    ],
+    "image_url": "assets/images/activities/durans-station-badge.webp"
   },
   {
     "id": "biopark",
     "name": "ABQ BioPark",
-    "description": "Family-friendly complex including zoo, aquarium, botanic garden, and Tingley Beach. Spend a full day exploring animals from around the world, beautiful gardens, and fishing ponds.",
+    "description": "Family-friendly complex including zoo, aquarium, botanic garden, and Tingley Beach. Spend a full day exploring animals from around the world, beautiful gardens, and fish ponds.",
     "category": "Outdoor Activities",
     "subcategory": "Family Attractions",
-    "tags": ["zoo", "aquarium", "garden", "family-friendly", "animals", "nature", "all-day activity"],
+    "tags": [
+      "zoo",
+      "aquarium",
+      "garden",
+      "family-friendly",
+      "animals",
+      "nature",
+      "all-day activity"
+    ],
     "address": "2601 Central Ave NW, Albuquerque, NM 87104",
     "neighborhood": "Old Town",
     "price_range": "$$",
     "website_url": "https://www.cabq.gov/artsculture/biopark",
+    "image_url": "assets/images/activities/biopark-badge.webp",
     "distance_from_venue": "10 minute walk",
-    "highlights": ["Zoo, aquarium, and garden", "Tingley Beach fishing", "All-day entertainment"],
-    "best_for": ["families", "animal lovers", "all-day activities"]
+    "highlights": [
+      "Zoo, aquarium, and garden",
+      "Tingley Beach fishing",
+      "All-day entertainment"
+    ],
+    "best_for": [
+      "families",
+      "animal lovers",
+      "all-day activities"
+    ]
   },
   {
     "id": "sawmill-market",
     "name": "Sawmill Market",
-    "description": "Vibrant artisan food hall in a renovated lumber warehouse featuring local vendors, diverse cuisines, craft beverages, and a rooftop patio. Perfect for groups who can't agree on one cuisine.",
+    "description": "Vibrant artisan food hall in a renovated lumber warehouse featuring local vendors, diverse cuisines, craft beverages, and a patio. Perfect for groups who can't agree on one cuisine.",
     "category": "Food & Dining",
     "subcategory": "Food Hall",
-    "tags": ["food hall", "diverse options", "local vendors", "rooftop", "craft beverages", "groups"],
+    "tags": [
+      "food hall",
+      "diverse options",
+      "local vendors",
+      "rooftop",
+      "craft beverages",
+      "groups"
+    ],
     "address": "1909 Bellamah Ave NW, Albuquerque, NM 87104",
     "neighborhood": "Sawmill District",
     "price_range": "$$",
     "website_url": "https://www.sawmillmarket.com",
     "distance_from_venue": "8 minute walk",
-    "highlights": ["Diverse food options", "Rooftop patio", "Local artisan vendors"],
-    "best_for": ["groups", "foodies", "indecisive eaters"]
+    "highlights": [
+      "Diverse food options",
+      "Patio",
+      "Local artisan vendors"
+    ],
+    "best_for": [
+      "groups",
+      "foodies",
+      "indecisive eaters"
+    ],
+    "image_url": "assets/images/activities/sawmill-market-badge.webp"
   }
 ]

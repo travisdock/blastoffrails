@@ -167,9 +167,12 @@
 }
 
 .activity-image {
-    width: 100%;
+    width: 180px;
     height: 180px;
     object-fit: cover;
+    border-radius: 50%;
+    margin: 1rem auto 0;
+    display: block;
 }
 
 .activity-image-placeholder {

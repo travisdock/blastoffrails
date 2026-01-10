@@ -150,7 +150,7 @@
     // Create HTML for activity card
     function createActivityCard(activity) {
         var imageHtml = activity.image_url
-            ? '<img src="' + escapeHtml(activity.image_url) + '" alt="' + escapeHtml(activity.name) + '" class="activity-image">'
+            ? '<img src="' + escapeHtml(activity.image_url) + '" alt="' + escapeHtml(activity.name) + '" class="activity-image" loading="lazy">'
             : '<div class="activity-image-placeholder"></div>';
 
         var tagsHtml = '';
