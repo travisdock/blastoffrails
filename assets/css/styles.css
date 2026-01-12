@@ -388,6 +388,7 @@ p.footer-disclaimer {
 
 #subscribe-form {
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -417,6 +418,7 @@ p.footer-disclaimer {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 #subscribe-form button:hover {
@@ -434,14 +436,6 @@ p.footer-disclaimer {
     .subscribe-section {
         margin-top: 2rem;
         padding: 1.5rem;
-    }
-
-    #subscribe-form {
-        flex-direction: column;
-    }
-
-    #subscribe-form button {
-        width: 100%;
     }
 }
 
