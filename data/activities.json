@@ -21,7 +21,7 @@
     "price_range": "$$",
     "website_url": "https://sandiapeak.com",
     "image_url": "assets/images/activities/sandia-peak-tramway-badge.webp",
-    "distance_from_venue": "25 minute drive",
+    "distance_from_venue": "24 mins drive",
     "highlights": [
       "World's longest aerial tramway",
       "10,378-foot summit views",
@@ -54,7 +54,7 @@
     "neighborhood": "Old Town",
     "price_range": "Free",
     "website_url": "https://www.albuquerqueoldtown.com",
-    "distance_from_venue": "5 minute walk",
+    "distance_from_venue": "7 mins walk",
     "highlights": [
       "San Felipe de Neri Church (1793)",
       "200+ shops and galleries",
@@ -87,7 +87,7 @@
     "neighborhood": "University",
     "price_range": "$",
     "website_url": "https://www.frontierrestaurant.com",
-    "distance_from_venue": "15 minute drive",
+    "distance_from_venue": "12 mins drive",
     "highlights": [
       "Famous cinnamon rolls",
       "Open since 1971",
@@ -120,7 +120,7 @@
     "neighborhood": "West Side",
     "price_range": "Free",
     "website_url": "https://www.nps.gov/petr",
-    "distance_from_venue": "20 minute drive",
+    "distance_from_venue": "13 mins drive",
     "highlights": [
       "24,000+ petroglyphs",
       "Easy hiking trails",
@@ -154,7 +154,7 @@
     "neighborhood": "North Valley",
     "price_range": "$$",
     "website_url": "https://indianpueblo.org",
-    "distance_from_venue": "10 minute drive",
+    "distance_from_venue": "5 mins drive",
     "highlights": [
       "19 Pueblo nations represented",
       "Live dance performances",
@@ -187,7 +187,7 @@
     "neighborhood": "North Valley",
     "price_range": "$$",
     "website_url": "https://www.elpinto.com",
-    "distance_from_venue": "20 minute drive",
+    "distance_from_venue": "18 mins drive",
     "highlights": [
       "Famous fresh salsa",
       "Beautiful patio dining",
@@ -219,7 +219,7 @@
     "neighborhood": "Northeast Heights",
     "price_range": "$",
     "website_url": "https://www.balloonmuseum.com",
-    "distance_from_venue": "20 minute drive",
+    "distance_from_venue": "15 mins drive",
     "highlights": [
       "Interactive exhibits",
       "Historic balloon gondolas",
@@ -253,7 +253,7 @@
     "neighborhood": "Valley",
     "price_range": "Free",
     "website_url": "https://www.cabq.gov/parksandrecreation/open-space/lands/paseo-del-bosque-trail",
-    "distance_from_venue": "10 minute walk",
+    "distance_from_venue": "5 mins drive to trailhead",
     "highlights": [
       "16 miles of paved trail",
       "Cottonwood forest scenery",
@@ -286,7 +286,7 @@
     "neighborhood": "East Mountains",
     "price_range": "$",
     "website_url": "https://tinkertown.com",
-    "distance_from_venue": "30 minute drive",
+    "distance_from_venue": "29 mins drive",
     "highlights": [
       "Hand-carved miniature town",
       "40 years in the making",
@@ -318,7 +318,7 @@
     "neighborhood": "Santa Fe",
     "price_range": "$$",
     "website_url": "https://meowwolf.com/visit/santa-fe",
-    "distance_from_venue": "1 hour drive",
+    "distance_from_venue": "58 mins drive",
     "highlights": [
       "Immersive art experience",
       "Secret passages and portals",
@@ -351,7 +351,7 @@
     "neighborhood": "Nob Hill",
     "price_range": "$",
     "website_url": "https://getplowed.com",
-    "distance_from_venue": "15 minute drive",
+    "distance_from_venue": "14 mins drive",
     "highlights": [
       "Local craft beer",
       "Dog-friendly patio",
@@ -383,7 +383,7 @@
     "neighborhood": "North Valley",
     "price_range": "$",
     "website_url": "https://www.rgnc.org",
-    "distance_from_venue": "15 minute drive",
+    "distance_from_venue": "8 mins drive",
     "highlights": [
       "Wildlife viewing areas",
       "Bosque trails",
@@ -416,7 +416,7 @@
     "neighborhood": "Old Town",
     "price_range": "$$$",
     "website_url": "https://www.hotelchaco.com/eat-drink/level-5",
-    "distance_from_venue": "5 minute walk",
+    "distance_from_venue": "7 mins walk",
     "highlights": [
       "Rooftop views",
       "Craft cocktails",
@@ -448,7 +448,7 @@
     "neighborhood": "Northeast Heights",
     "price_range": "$",
     "website_url": "https://www.cabq.gov/parksandrecreation/open-space/lands/elena-gallegos-open-space",
-    "distance_from_venue": "20 minute drive",
+    "distance_from_venue": "21 mins drive",
     "highlights": [
       "Multiple trail options",
       "Mountain views",
@@ -480,7 +480,7 @@
     "neighborhood": "Bernalillo",
     "price_range": "$$",
     "website_url": "https://www.rangecafe.com",
-    "distance_from_venue": "20 minute drive",
+    "distance_from_venue": "20 mins drive",
     "highlights": [
       "Amazing breakfast",
       "Homemade desserts",
@@ -511,7 +511,7 @@
     "neighborhood": "Old Town",
     "price_range": "$",
     "website_url": "https://www.cabq.gov/artsculture/albuquerque-museum",
-    "distance_from_venue": "0 minute walk",
+    "distance_from_venue": "2 mins walk",
     "highlights": [
       "Free Sunday mornings",
       "Sculpture garden",
@@ -543,7 +543,7 @@
     "neighborhood": "Cochiti Pueblo",
     "price_range": "$",
     "website_url": "https://www.blm.gov/visit/kktr",
-    "distance_from_venue": "45 minute drive",
+    "distance_from_venue": "54 mins drive",
     "highlights": [
       "Unique tent rock formations",
       "Slot canyon trail",
@@ -576,7 +576,7 @@
     "neighborhood": "Downtown",
     "price_range": "$",
     "website_url": null,
-    "distance_from_venue": "10 minute walk",
+    "distance_from_venue": "11 mins walk",
     "highlights": [
       "Since 1942",
       "Authentic chile",
@@ -609,7 +609,7 @@
     "price_range": "$$",
     "website_url": "https://www.cabq.gov/artsculture/biopark",
     "image_url": "assets/images/activities/biopark-badge.webp",
-    "distance_from_venue": "10 minute walk",
+    "distance_from_venue": "9 mins drive",
     "highlights": [
       "Zoo, aquarium, and garden",
       "Tingley Beach fishing",
@@ -639,7 +639,7 @@
     "neighborhood": "Sawmill District",
     "price_range": "$$",
     "website_url": "https://www.sawmillmarket.com",
-    "distance_from_venue": "8 minute walk",
+    "distance_from_venue": "7 mins walk",
     "highlights": [
       "Diverse food options",
       "Patio",
@@ -651,5 +651,68 @@
       "indecisive eaters"
     ],
     "image_url": "assets/images/activities/sawmill-market-badge.webp"
+  },
+  {
+    "id": "cutbow-coffee",
+    "name": "Cutbow Coffee Roastology",
+    "description": "Local specialty coffee roaster founded by New Mexico native Paul Gallegos, who brought nearly 30 years of professional roasting experience back home. Fresh-roasted beans daily with a cozy tasting room near Old Town. Try their signature blends and single origins.",
+    "category": "Food & Dining",
+    "subcategory": "Coffee",
+    "tags": [
+      "coffee",
+      "local roaster",
+      "specialty coffee",
+      "breakfast",
+      "cafe",
+      "work friendly"
+    ],
+    "address": "1208 Rio Grande Blvd NW, Albuquerque, NM 87104",
+    "neighborhood": "Old Town",
+    "price_range": "$",
+    "website_url": "https://cutbowcoffee.com",
+    "image_url": "assets/images/activities/cutbow-coffee-badge.webp",
+    "distance_from_venue": "20 mins walk",
+    "highlights": [
+      "Fresh-roasted local beans",
+      "Cozy tasting room",
+      "New Mexico owned"
+    ],
+    "best_for": [
+      "coffee lovers",
+      "remote workers",
+      "morning people"
+    ]
+  },
+  {
+    "id": "bike-in-coffee",
+    "name": "Bike In Coffee at Old Town Farm",
+    "description": "Unique bicycle-focused cafe on a shaded 12-acre urban farm just west of Old Town. Perfect pit stop for cyclists on the I-40 bike path, or anyone seeking a peaceful outdoor coffee experience with live music and farm vibes.",
+    "category": "Food & Dining",
+    "subcategory": "Coffee",
+    "tags": [
+      "coffee",
+      "cycling",
+      "outdoor seating",
+      "live music",
+      "farm",
+      "unique",
+      "breakfast"
+    ],
+    "address": "949 Montoya St NW, Albuquerque, NM 87104",
+    "neighborhood": "Old Town",
+    "price_range": "$",
+    "website_url": "https://oldtownfarm.com",
+    "image_url": "assets/images/activities/bike-in-coffee-badge.webp",
+    "distance_from_venue": "26 mins walk",
+    "highlights": [
+      "On the bike path",
+      "12-acre urban farm setting",
+      "Live music weekends"
+    ],
+    "best_for": [
+      "cyclists",
+      "nature lovers",
+      "music fans"
+    ]
   }
 ]
