@@ -368,6 +368,18 @@ p.footer-disclaimer {
 }
 
 /* Subscribe Section */
+/* Announcement Banner */
+.announcement {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    max-width: 500px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .subscribe-section {
     margin-top: 3rem;
     padding: 2rem;
