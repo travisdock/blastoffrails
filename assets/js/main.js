@@ -1,4 +1,33 @@
 // ========================================
+// RANDOM BACKGROUND MODULE
+// ========================================
+(function() {
+    // Check WebP support
+    function supportsWebP() {
+        const canvas = document.createElement('canvas');
+        canvas.width = 1;
+        canvas.height = 1;
+        return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    }
+
+    const ext = supportsWebP() ? 'webp' : 'jpg';
+    const backgrounds = [
+        `assets/images/backgrounds/background.${ext}`,
+        `assets/images/backgrounds/background2.${ext}`,
+        `assets/images/backgrounds/background3.${ext}`
+    ];
+
+    const heroBackground = document.querySelector('.hero-background');
+    if (heroBackground) {
+        const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        heroBackground.style.backgroundImage = `url('${randomBg}')`;
+        heroBackground.style.backgroundSize = 'cover';
+        heroBackground.style.backgroundPosition = 'center center';
+        heroBackground.style.backgroundRepeat = 'no-repeat';
+    }
+})();
+
+// ========================================
 // ANALYTICS MODULE
 // ========================================
 (function() {
