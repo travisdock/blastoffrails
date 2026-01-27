@@ -28,6 +28,499 @@ body {
     flex-direction: column;
 }
 
+/* ================================
+   EPIC HOMEPAGE STYLES
+   ================================ */
+
+/* Homepage specific body styles */
+body.homepage {
+    position: relative;
+    background: transparent;
+}
+
+/* Full-page background image (JS randomizes, this is fallback) */
+.hero-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: url('../images/backgrounds/background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Gradient overlay for better text readability */
+.hero-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(
+        180deg,
+        rgba(84, 41, 30, 0.3) 0%,
+        rgba(84, 41, 30, 0.2) 30%,
+        rgba(84, 41, 30, 0.4) 70%,
+        rgba(84, 41, 30, 0.7) 100%
+    );
+}
+
+/* Transparent header for homepage */
+.header-transparent {
+    background-color: transparent;
+    border-bottom: none;
+    position: relative;
+    z-index: 10;
+}
+
+.header-transparent .nav-container {
+    background: rgba(254, 240, 212, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.5rem 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(182, 64, 35, 0.3);
+}
+
+.header-transparent .logo {
+    font-size: 1.5rem;
+}
+
+.header-transparent .logo-image {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* Epic Hero Section */
+.hero-epic {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 2rem 6rem;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-epic h1 {
+    font-size: 6rem;
+    color: #fff;
+    font-weight: 800;
+    text-shadow:
+        0 0 0 3px var(--primary-dark),
+        4px 4px 0 var(--primary-dark),
+        8px 8px 0 rgba(84, 41, 30, 0.5),
+        0 0 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 2px var(--primary-dark);
+    paint-order: stroke fill;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    animation: heroFadeIn 1s ease-out;
+    background: linear-gradient(180deg, rgba(84, 41, 30, 0.6) 0%, rgba(84, 41, 30, 0.4) 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+}
+
+.hero-epic .conference-tagline {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    animation: heroFadeIn 1s ease-out 0.2s both;
+}
+
+.hero-epic .conference-info {
+    font-size: 2rem;
+    color: var(--secondary);
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.25rem;
+    animation: heroFadeIn 1s ease-out 0.4s both;
+}
+
+.hero-epic .home-actions {
+    margin: 2rem 0 1rem;
+    animation: heroFadeIn 1s ease-out 0.6s both;
+}
+
+.hero-epic .home-actions .cta-button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    font-size: 1.25rem;
+    padding: 1.25rem 2.5rem;
+    box-shadow:
+        0 10px 40px rgba(233, 112, 45, 0.4),
+        0 0 20px rgba(233, 112, 45, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-epic .home-actions .cta-button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow:
+        0 15px 50px rgba(233, 112, 45, 0.5),
+        0 0 30px rgba(233, 112, 45, 0.3);
+}
+
+.hero-epic .announcement {
+    background: linear-gradient(135deg, var(--secondary) 0%, #ffc857 100%);
+    color: var(--text-dark);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 30px rgba(255, 179, 56, 0.4);
+    animation: heroFadeIn 1s ease-out 0.8s both;
+}
+
+.hero-epic .social-media-links {
+    animation: heroFadeIn 1s ease-out 1s both;
+}
+
+.hero-epic .social-media-links a {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--secondary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-epic .social-media-links a:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    box-shadow: 0 8px 30px rgba(255, 179, 56, 0.5);
+}
+
+.hero-epic .subscribe-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(182, 64, 35, 0.2);
+    animation: heroFadeIn 1s ease-out 1.2s both;
+}
+
+/* Homepage footer styling */
+body.homepage footer {
+    background: rgba(254, 240, 212, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+/* Fade-in animation */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   EPIC INNER PAGES (Tickets, etc.)
+   ================================ */
+
+body.page-epic {
+    position: relative;
+    background: transparent;
+}
+
+
+/* Epic page content styling */
+.page-content-epic {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 2rem 6rem;
+    min-height: calc(100vh - 100px);
+}
+
+.page-content-epic h1 {
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 800;
+    text-shadow:
+        0 0 0 3px var(--primary-dark),
+        4px 4px 0 var(--primary-dark),
+        8px 8px 0 rgba(84, 41, 30, 0.5),
+        0 0 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 2px var(--primary-dark);
+    paint-order: stroke fill;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+    animation: heroFadeIn 1s ease-out;
+    background: linear-gradient(180deg, rgba(84, 41, 30, 0.6) 0%, rgba(84, 41, 30, 0.4) 100%);
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Epic ticket info styling */
+.page-content-epic .ticket-info {
+    animation: heroFadeIn 1s ease-out 0.2s both;
+}
+
+.page-content-epic .ticket-info > p {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem;
+}
+
+.page-content-epic .ticket-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    animation: heroFadeIn 1s ease-out 0.4s both;
+}
+
+.page-content-epic .ticket-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.page-content-epic .ticket-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Epic travel page styling */
+.page-content-epic .travel-section h2 {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: heroFadeIn 1s ease-out 0.3s both;
+}
+
+.page-content-epic .venue-info,
+.page-content-epic .hotel-card,
+.page-content-epic .food-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    animation: heroFadeIn 1s ease-out 0.4s both;
+}
+
+.page-content-epic .hotel-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.page-content-epic .venue-info:hover,
+.page-content-epic .hotel-card:hover,
+.page-content-epic .food-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Epic speakers page styling */
+.page-content-epic .announcement {
+    background: linear-gradient(135deg, var(--secondary) 0%, #ffc857 100%);
+    color: var(--text-dark);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 30px rgba(255, 179, 56, 0.4);
+    animation: heroFadeIn 1s ease-out 0.3s both;
+    display: block;
+    max-width: fit-content;
+    margin: 0 auto 2rem;
+}
+
+.page-content-epic .speaker-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    animation: heroFadeIn 1s ease-out 0.4s both;
+}
+
+.page-content-epic .speaker-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.page-content-epic .speaker-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.page-content-epic .speaker-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.page-content-epic .speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Epic things-to-do page styling */
+.page-content-epic .intro-text {
+    font-size: 1.25rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: heroFadeIn 1s ease-out 0.2s both;
+    margin-bottom: 2rem;
+}
+
+.page-content-epic .sponsor-attribution {
+    animation: heroFadeIn 1s ease-out 0.3s both;
+}
+
+/* Epic sponsor page styling */
+.page-content-epic .sponsor-slot {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    animation: heroFadeIn 1s ease-out 0.3s both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.page-content-epic .sponsor-slot:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+.page-content-epic .sponsor-grid-bottom .sponsor-slot:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+/* Epic about page styling */
+.page-content-epic.container {
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+}
+
+.page-content-epic .about-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    animation: heroFadeIn 1s ease-out 0.3s both;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.page-content-epic .about-section:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.page-content-epic .about-section:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.page-content-epic .about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Epic page footer */
+body.page-epic footer {
+    background: rgba(254, 240, 212, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile responsive for epic pages */
+@media (max-width: 768px) {
+    .page-content-epic {
+        padding: 2rem 1rem 4rem;
+    }
+
+    .page-content-epic h1 {
+        font-size: 2.5rem;
+        -webkit-text-stroke: 1px var(--primary-dark);
+        padding: 0.4rem 1rem;
+    }
+
+    .page-content-epic .ticket-info > p {
+        font-size: 1.1rem;
+    }
+
+    .page-content-epic .about-section {
+        padding: 1.25rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .page-content-epic.container {
+        padding: 1rem;
+    }
+}
+
+/* Mobile responsive for epic homepage */
+@media (max-width: 768px) {
+    .header-transparent .nav-container {
+        border-radius: 12px;
+        margin: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(254, 240, 212, 0.95);
+    }
+
+    .header-transparent .nav-links {
+        background-color: rgba(254, 240, 212, 0.98);
+    }
+
+    .hero-epic {
+        padding: 2rem 1rem 4rem;
+        min-height: calc(100vh - 80px);
+    }
+
+    .hero-epic h1 {
+        font-size: 2.5rem;
+        text-shadow:
+            2px 2px 0 var(--primary-dark),
+            4px 4px 0 rgba(84, 41, 30, 0.5),
+            0 0 30px rgba(0, 0, 0, 0.8);
+        -webkit-text-stroke: 1px var(--primary-dark);
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-epic .conference-tagline {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-epic .conference-info {
+        font-size: 1.5rem;
+    }
+
+    .hero-epic .home-actions .cta-button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .hero-epic .announcement {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
 /* Header and Navigation */
 header {
     background-color: var(--bg);
@@ -95,19 +588,6 @@ main {
     padding: 1rem;
 }
 
-/* Hero Section (Home Page) */
-.hero {
-    text-align: center;
-    padding: 8rem 2rem;
-}
-
-.hero h1 {
-    font-size: 5rem;
-    color: var(--primary);
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 /* Page Content (Other Pages) */
 .page-content {
     text-align: center;
@@ -129,23 +609,6 @@ main {
     color: var(--secondary);
     font-weight: 600;
     margin-bottom: 0.5rem;
-}
-
-/* Coming Soon Message */
-.coming-soon {
-    font-size: 2rem;
-    color: var(--text-dark);
-    font-weight: 400;
-    margin-top: 0.5rem;
-}
-
-/* Footer */
-footer {
-    background-color: var(--bg);
-    color: var(--text);
-    text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid var(--border);
 }
 
 /* Mobile Menu Toggle */
@@ -349,7 +812,6 @@ p.footer-disclaimer {
         background-color: rgba(233, 112, 45, 0.1);
     }
 
-    .hero h1,
     .page-content h1 {
         font-size: 2.5rem;
         white-space: normal;
@@ -360,10 +822,6 @@ p.footer-disclaimer {
     .conference-info {
         font-size: 1.75rem;
         white-space: nowrap;
-    }
-
-    .coming-soon {
-        font-size: 1.5rem;
     }
 }
 
@@ -510,30 +968,6 @@ p.footer-disclaimer {
     box-shadow: 0 8px 25px rgba(84, 41, 30, 0.15);
 }
 
-.sponsor-placeholder {
-    width: 100%;
-    max-width: 180px;
-    height: 100px;
-    background-color: var(--bg);
-    border: 2px dashed var(--border);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.sponsor-slot:hover .sponsor-placeholder {
-    background-color: rgba(233, 112, 45, 0.1);
-}
-
-.placeholder-text {
-    font-size: 1.1rem;
-    color: var(--text);
-    font-weight: 500;
-}
-
 .sponsor-slot h3 {
     font-size: 1.5rem;
     color: var(--primary);
@@ -593,10 +1027,6 @@ p.footer-disclaimer {
         padding: 0rem;
     }
 
-    .hero {
-      padding: 1rem;
-    }
-
     .sponsor-grid {
         grid-template-columns: 1fr;
         gap: 0.5rem;
@@ -628,16 +1058,6 @@ p.footer-disclaimer {
         padding: 1rem;
     }
 
-    .sponsor-placeholder {
-        width: 100%;
-        max-width: 80px;
-        height: 60px;
-    }
-
-    .placeholder-text {
-        font-size: 0.7rem;
-    }
-
     .sponsor-cta {
         padding: 2rem 1.5rem;
     }
@@ -652,13 +1072,6 @@ p.footer-disclaimer {
 }
 
 /* Ticket Page Styles */
-.ticket-info h2 {
-    font-size: 2.5rem;
-    color: var(--secondary);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-
 .ticket-info > p {
     font-size: 1.5rem;
     color: var(--text-dark);
@@ -748,12 +1161,9 @@ p.footer-disclaimer {
     }
 }
 
-.travel-section {
-  margin-top: 1rem;
-}
-
 /* Travel Page Styles */
 .travel-section {
+    margin-top: 1rem;
     margin-bottom: 3rem;
     text-align: left;
 }
