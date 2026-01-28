@@ -41,11 +41,11 @@ body.homepage {
 /* Full-page background image (JS randomizes, this is fallback) */
 .hero-background {
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 0;
     width: 100%;
-    height: 100vh; /* Fallback for older browsers */
-    height: 100lvh; /* Large viewport height - prevents shift when mobile address bar hides */
+    height: calc(100vh + 100px); /* Oversized to prevent shift when mobile address bar hides */
+    height: calc(100lvh + 100px); /* Large viewport height version */
     z-index: -2;
     background: url('../images/backgrounds/background.jpg') no-repeat center center;
     background-size: cover;
@@ -54,11 +54,11 @@ body.homepage {
 /* Gradient overlay for better text readability */
 .hero-overlay {
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 0;
     width: 100%;
-    height: 100vh; /* Fallback for older browsers */
-    height: 100lvh; /* Large viewport height - prevents shift when mobile address bar hides */
+    height: calc(100vh + 100px); /* Oversized to prevent shift when mobile address bar hides */
+    height: calc(100lvh + 100px); /* Large viewport height version */
     z-index: -1;
     background: linear-gradient(
         180deg,
@@ -136,7 +136,8 @@ body.homepage {
     font-weight: 500;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 1.5rem;
-    max-width: 600px;
+    max-width: 650px;
+    text-align: center;
     animation: heroFadeIn 1s ease-out 0.2s both;
 }
 
