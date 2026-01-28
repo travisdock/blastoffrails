@@ -14,7 +14,10 @@
     const backgrounds = [
         `assets/images/backgrounds/background.${ext}`,
         `assets/images/backgrounds/background2.${ext}`,
-        `assets/images/backgrounds/background3.${ext}`
+        `assets/images/backgrounds/background3.${ext}`,
+        `assets/images/backgrounds/background-mirrored.${ext}`,
+        `assets/images/backgrounds/background2-mirrored.${ext}`,
+        `assets/images/backgrounds/background3-mirrored.${ext}`
     ];
 
     const heroBackground = document.querySelector('.hero-background');
