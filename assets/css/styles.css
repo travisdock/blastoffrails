@@ -147,6 +147,49 @@ body.homepage {
     animation: heroFadeIn 1s ease-out 0.2s both;
 }
 
+.hero-epic .brought-to-you {
+    margin-bottom: 1.5rem;
+    animation: heroFadeIn 1s ease-out 0.3s both;
+}
+
+.hero-epic .brought-to-you-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-epic .brought-to-you-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-epic .brought-to-you-logos a {
+    display: flex;
+    align-items: center;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.hero-epic .brought-to-you-logos a:hover {
+    opacity: 1;
+}
+
+.hero-epic .brought-to-you-logos a img {
+    height: 28px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.hero-epic .brought-to-you-logos a.brought-to-you-featured img {
+    height: 40px;
+}
+
 .hero-epic .conference-info {
     font-size: 2rem;
     color: var(--secondary);
