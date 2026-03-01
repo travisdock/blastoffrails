@@ -1,3 +1,7 @@
+# Dev stuff
+screenshots/
+.claude/
+
 # Dependencies
 node_modules/
 
