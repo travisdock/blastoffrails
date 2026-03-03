@@ -1,6 +1,7 @@
 # Dev stuff
 screenshots/
 .claude/
+speaker-info/
 
 # Dependencies
 node_modules/

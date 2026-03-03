@@ -417,6 +417,18 @@ body.page-epic {
     animation-delay: 0.7s;
 }
 
+.page-content-epic .speaker-card:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.page-content-epic .speaker-card:nth-child(6) {
+    animation-delay: 0.9s;
+}
+
+.page-content-epic .speaker-card:nth-child(7) {
+    animation-delay: 1.0s;
+}
+
 .page-content-epic .speaker-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
@@ -1432,58 +1444,69 @@ body:has(.container) main {
 /* Mobile Responsive for Travel Page */
 /* Speakers Page */
 .speaker-grid {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 2rem auto 0;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
 }
+
 
 .speaker-card {
     background-color: var(--bg-alt);
     border: 2px solid var(--border);
     border-radius: 12px;
-    padding: 1.25rem;
+    padding: 1.5rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     box-shadow: 0 6px 18px rgba(84, 41, 30, 0.12);
+    width: 100%;
 }
 
 .speaker-photo {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid var(--border);
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    margin-bottom: 1rem;
 }
 
 .speaker-info {
-    text-align: left;
+    text-align: center;
 }
 
 .speaker-name {
     margin: 0 0 0.25rem 0;
     color: var(--primary);
+    font-size: 1.25rem;
 }
 
 .speaker-role {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.75rem 0;
     color: var(--secondary);
     font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .speaker-bio {
     margin: 0;
     color: var(--text-dark);
     line-height: 1.6;
+    font-size: 0.95rem;
+    display: none;
 }
 
 .speaker-links {
-    margin-top: 0.6rem;
-    display: flex;
+    margin-top: 0.75rem;
+    display: none;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
 }
 
@@ -1503,17 +1526,19 @@ body:has(.container) main {
     height: 24px;
 }
 
+/* Tablet layout for Speakers */
+@media (max-width: 960px) {
+    .speaker-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Mobile layout for Speakers */
 @media (max-width: 768px) {
-    .speaker-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .speaker-grid {
+        grid-template-columns: 1fr;
     }
 
-    .speaker-info {
-        text-align: center;
-    }
 }
 @media (max-width: 768px) {
     .page-content {
