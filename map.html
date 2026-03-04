@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Map - Blastoff Rails</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-96x96.png">
+    <meta name="theme-color" content="#e9702d">
+
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Area Map - Blastoff Rails">
+    <meta property="og:description" content="Explore the area around Blastoff Rails in Old Town Albuquerque">
+    <meta property="og:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
+    <meta property="og:url" content="https://blastoffrails.com/map.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blastoff Rails">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Area Map - Blastoff Rails">
+    <meta name="twitter:description" content="Explore the area around Blastoff Rails in Old Town Albuquerque">
+    <meta name="twitter:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/map.js" defer></script>
+</head>
+<body class="map-page">
+    <div class="map-container" id="map-container">
+        <div class="map-pan-layer" id="map-pan-layer">
+            <img src="assets/images/map.png"
+                 alt="Oil painting style aerial map of Old Town Albuquerque showing the area around Blastoff Rails"
+                 class="map-image"
+                 id="map-image">
+        </div>
+    </div>
+
+    <div class="map-nav-trigger" id="map-nav-trigger"></div>
+
+    <header class="header-transparent">
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo"><img src="assets/images/icons/avatar.webp" alt="Blastoff Rails" class="logo-image">Blastoff Rails</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="map.html" class="active">Map</a></li>
+                    <li><a href="things-to-do.html">Things to Do</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="sponsor.html">Sponsor</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main></main>
+</body>
+</html>
