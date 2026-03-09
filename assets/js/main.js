@@ -131,6 +131,65 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// SPEAKER MODAL MODULE
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('speaker-modal');
+    if (!modal) return;
+
+    const modalName = document.getElementById('modal-name');
+    const modalRole = document.getElementById('modal-role');
+    const modalBio = document.getElementById('modal-bio');
+    const modalAbout = document.getElementById('modal-about');
+    const modalTalk = document.getElementById('modal-talk');
+    const modalTalkDescription = document.getElementById('modal-talk-description');
+    const modalPicture = document.getElementById('modal-picture');
+    const modalLinks = document.getElementById('modal-links');
+
+    document.querySelectorAll('.speaker-card').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            // Don't open modal if clicking a social link
+            if (e.target.closest('a')) return;
+
+            modalName.textContent = card.querySelector('.speaker-name').textContent;
+            modalRole.textContent = card.querySelector('.speaker-role').textContent;
+
+            var bio = card.querySelector('.speaker-bio').textContent;
+            modalBio.textContent = bio || '';
+            modalAbout.style.display = bio ? '' : 'none';
+
+            var talk = card.getAttribute('data-talk');
+            modalTalkDescription.textContent = talk || '';
+            modalTalk.style.display = talk ? '' : 'none';
+
+            // Clone the picture element
+            modalPicture.innerHTML = card.querySelector('picture').innerHTML;
+
+            // Clone social links
+            var links = card.querySelector('.speaker-links');
+            modalLinks.innerHTML = links.innerHTML;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal
+    modal.querySelector('.speaker-modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// ========================================
 // SPONSOR CALCULATOR MODULE
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
