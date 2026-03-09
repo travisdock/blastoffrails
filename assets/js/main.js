@@ -131,6 +131,124 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// SPEAKER MODAL MODULE
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('speaker-modal');
+    if (!modal) return;
+
+    const modalName = document.getElementById('modal-name');
+    const modalRole = document.getElementById('modal-role');
+    const modalBio = document.getElementById('modal-bio');
+    const modalAbout = document.getElementById('modal-about');
+    const modalTalk = document.getElementById('modal-talk');
+    const modalTalkDescription = document.getElementById('modal-talk-description');
+    const modalPicture = document.getElementById('modal-picture');
+    const modalLinks = document.getElementById('modal-links');
+
+    var openerElement = null;
+
+    function openSpeakerModal(card) {
+        modalName.textContent = card.querySelector('.speaker-name').textContent;
+        modalRole.textContent = card.querySelector('.speaker-role').textContent;
+
+        var bio = card.querySelector('.speaker-bio').textContent;
+        modalBio.textContent = bio || '';
+        modalAbout.style.display = bio ? '' : 'none';
+
+        var talk = card.getAttribute('data-talk');
+        modalTalkDescription.textContent = talk || '';
+        modalTalk.style.display = talk ? '' : 'none';
+
+        // Clone the picture element
+        modalPicture.innerHTML = card.querySelector('picture').innerHTML;
+
+        // Clone social links
+        var links = card.querySelector('.speaker-links');
+        modalLinks.innerHTML = links.innerHTML;
+
+        openerElement = card;
+
+        // Make background content inert for screen readers
+        Array.from(document.body.children).forEach(function(child) {
+            if (child !== modal) child.setAttribute('aria-hidden', 'true');
+        });
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.speaker-modal').focus();
+    }
+
+    document.querySelectorAll('.speaker-card').forEach(function(card) {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+
+        card.addEventListener('click', function(e) {
+            // Don't open modal if clicking a social link
+            if (e.target.closest('a')) return;
+            openSpeakerModal(card);
+        });
+
+        card.addEventListener('keydown', function(e) {
+            if (e.target.closest('a')) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openSpeakerModal(card);
+            }
+        });
+    });
+
+    // Close modal
+    modal.querySelector('.speaker-modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (!modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            closeModal();
+            return;
+        }
+
+        // Trap focus within the modal
+        if (e.key === 'Tab') {
+            var focusable = modal.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+            if (focusable.length === 0) return;
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+
+            if (e.shiftKey) {
+                if (document.activeElement === first || document.activeElement === modal.querySelector('.speaker-modal')) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else {
+                if (document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+
+        // Restore background content for screen readers
+        Array.from(document.body.children).forEach(function(child) {
+            if (child !== modal) child.removeAttribute('aria-hidden');
+        });
+
+        if (openerElement) {
+            openerElement.focus();
+            openerElement = null;
+        }
+    }
+});
+
+// ========================================
 // SPONSOR CALCULATOR MODULE
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
