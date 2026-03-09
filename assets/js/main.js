@@ -168,6 +168,12 @@ document.addEventListener('DOMContentLoaded', function() {
         modalLinks.innerHTML = links.innerHTML;
 
         openerElement = card;
+
+        // Make background content inert for screen readers
+        Array.from(document.body.children).forEach(function(child) {
+            if (child !== modal) child.setAttribute('aria-hidden', 'true');
+        });
+
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         modal.querySelector('.speaker-modal').focus();
@@ -198,12 +204,43 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.target === modal) closeModal();
     });
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        if (!modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            closeModal();
+            return;
+        }
+
+        // Trap focus within the modal
+        if (e.key === 'Tab') {
+            var focusable = modal.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+            if (focusable.length === 0) return;
+            var first = focusable[0];
+            var last = focusable[focusable.length - 1];
+
+            if (e.shiftKey) {
+                if (document.activeElement === first || document.activeElement === modal.querySelector('.speaker-modal')) {
+                    e.preventDefault();
+                    last.focus();
+                }
+            } else {
+                if (document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        }
     });
 
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
+
+        // Restore background content for screen readers
+        Array.from(document.body.children).forEach(function(child) {
+            if (child !== modal) child.removeAttribute('aria-hidden');
+        });
+
         if (openerElement) {
             openerElement.focus();
             openerElement = null;
