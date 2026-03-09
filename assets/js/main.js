@@ -146,31 +146,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalPicture = document.getElementById('modal-picture');
     const modalLinks = document.getElementById('modal-links');
 
+    var openerElement = null;
+
+    function openSpeakerModal(card) {
+        modalName.textContent = card.querySelector('.speaker-name').textContent;
+        modalRole.textContent = card.querySelector('.speaker-role').textContent;
+
+        var bio = card.querySelector('.speaker-bio').textContent;
+        modalBio.textContent = bio || '';
+        modalAbout.style.display = bio ? '' : 'none';
+
+        var talk = card.getAttribute('data-talk');
+        modalTalkDescription.textContent = talk || '';
+        modalTalk.style.display = talk ? '' : 'none';
+
+        // Clone the picture element
+        modalPicture.innerHTML = card.querySelector('picture').innerHTML;
+
+        // Clone social links
+        var links = card.querySelector('.speaker-links');
+        modalLinks.innerHTML = links.innerHTML;
+
+        openerElement = card;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.speaker-modal').focus();
+    }
+
     document.querySelectorAll('.speaker-card').forEach(function(card) {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+
         card.addEventListener('click', function(e) {
             // Don't open modal if clicking a social link
             if (e.target.closest('a')) return;
+            openSpeakerModal(card);
+        });
 
-            modalName.textContent = card.querySelector('.speaker-name').textContent;
-            modalRole.textContent = card.querySelector('.speaker-role').textContent;
-
-            var bio = card.querySelector('.speaker-bio').textContent;
-            modalBio.textContent = bio || '';
-            modalAbout.style.display = bio ? '' : 'none';
-
-            var talk = card.getAttribute('data-talk');
-            modalTalkDescription.textContent = talk || '';
-            modalTalk.style.display = talk ? '' : 'none';
-
-            // Clone the picture element
-            modalPicture.innerHTML = card.querySelector('picture').innerHTML;
-
-            // Clone social links
-            var links = card.querySelector('.speaker-links');
-            modalLinks.innerHTML = links.innerHTML;
-
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+        card.addEventListener('keydown', function(e) {
+            if (e.target.closest('a')) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openSpeakerModal(card);
+            }
         });
     });
 
@@ -186,6 +204,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
+        if (openerElement) {
+            openerElement.focus();
+            openerElement = null;
+        }
     }
 });
 

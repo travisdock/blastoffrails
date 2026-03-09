@@ -1474,6 +1474,13 @@ body:has(.container) main {
     box-shadow: 0 10px 28px rgba(84, 41, 30, 0.2);
 }
 
+.speaker-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(84, 41, 30, 0.2);
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+}
+
 .speaker-photo {
     width: 160px;
     height: 160px;
