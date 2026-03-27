@@ -1143,11 +1143,18 @@ p.footer-disclaimer {
 }
 
 .ticket-types {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.ticket-card {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: 300px;
+    box-sizing: border-box;
 }
 
 .ticket-card {
@@ -1208,7 +1215,6 @@ p.footer-disclaimer {
     }
     
     .ticket-types {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
     
