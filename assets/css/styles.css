@@ -1049,22 +1049,23 @@ p.footer-disclaimer {
     background-color: var(--bg-alt);
     border: 2px solid var(--primary);
     border-radius: 12px;
-    padding: 3rem 2rem;
-    margin-top: 3rem;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem auto 0;
+    max-width: 480px;
 }
 
 .sponsor-cta h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
 .sponsor-cta p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-dark);
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
 }
 
 .cta-button {
@@ -1123,11 +1124,11 @@ p.footer-disclaimer {
     }
 
     .sponsor-cta {
-        padding: 2rem 1.5rem;
+        padding: 1.25rem 1.25rem;
     }
 
     .sponsor-cta h2 {
-        font-size: 2rem;
+        font-size: 1.35rem;
     }
 
     .intro-text {
