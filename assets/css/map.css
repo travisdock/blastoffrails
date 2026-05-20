@@ -1,0 +1,268 @@
+/* ================================
+   MAP PAGE STYLES
+   ================================ */
+
+/* Full-viewport map page */
+.map-page {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* --- Auto-hide navbar on map page --- */
+.map-page header {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 50;
+}
+
+.map-page header.is-visible {
+    transform: translateY(0);
+}
+
+.map-nav-trigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 40;
+}
+
+/* --- Map Container (full-page, pannable) --- */
+.map-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.map-container.is-dragging {
+    cursor: grabbing;
+}
+
+.map-pan-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+
+.map-pan-layer.is-bouncing {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.map-image {
+    display: block;
+    min-width: 100vw;
+    min-height: 100vh;
+    user-select: none;
+    -webkit-user-drag: none;
+    border: 4px solid var(--border);
+    box-sizing: border-box;
+}
+
+/* --- Markers --- */
+.map-marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+}
+
+.map-marker:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+    border-radius: 50%;
+}
+
+.map-marker__dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.map-marker--venue .map-marker__dot { background: var(--primary); }
+.map-marker--hotel .map-marker__dot { background: var(--secondary); }
+.map-marker--food .map-marker__dot { background: #4CAF50; }
+.map-marker--attraction .map-marker__dot { background: #7E57C2; }
+
+.map-marker:hover .map-marker__dot,
+.map-marker--active .map-marker__dot {
+    transform: scale(1.3);
+}
+
+/* Pulse animation on venue marker */
+.map-marker--venue::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0;
+    animation: markerPulse 2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes markerPulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+/* --- Popups --- */
+.map-popup {
+    position: absolute;
+    z-index: 10;
+    width: 260px;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 2px solid rgba(182, 64, 35, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.25rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.map-popup--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.map-popup__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.map-popup__type {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.map-popup__type--venue { background: var(--primary); }
+.map-popup__type--hotel { background: var(--secondary); color: var(--text-dark); }
+.map-popup__type--food { background: #4CAF50; }
+.map-popup__type--attraction { background: #7E57C2; }
+
+.map-popup__close {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0 0.25rem;
+    line-height: 1;
+}
+
+.map-popup__close:hover {
+    color: var(--text-dark);
+}
+
+.map-popup__name {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+}
+
+.map-popup__address {
+    font-size: 0.85rem;
+    color: var(--text);
+    margin: 0 0 0.25rem;
+}
+
+.map-popup__distance {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-style: italic;
+    margin: 0 0 0.5rem;
+}
+
+.map-popup__description {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+
+.map-popup__detail {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+}
+
+.map-popup__link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.map-popup__link:hover {
+    color: var(--primary-dark);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .map-marker {
+        width: 44px;
+        height: 44px;
+    }
+
+    .map-marker__dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .map-popup {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        z-index: 100;
+        padding: 1.25rem 1.5rem 2rem;
+    }
+
+    .map-popup--visible {
+        transform: translateY(0);
+    }
+
+}
