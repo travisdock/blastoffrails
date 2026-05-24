@@ -99,6 +99,51 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// NAV DROPDOWN MODULE
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+    if (dropdowns.length === 0) return;
+
+    function closeAll() {
+        dropdowns.forEach(function(d) {
+            d.classList.remove('open');
+            const t = d.querySelector('.nav-dropdown-toggle');
+            if (t) t.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    dropdowns.forEach(function(dropdown) {
+        const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const wasOpen = dropdown.classList.contains('open');
+            closeAll();
+            if (!wasOpen) {
+                dropdown.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        dropdowns.forEach(function(dropdown) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                const t = dropdown.querySelector('.nav-dropdown-toggle');
+                if (t) t.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeAll();
+    });
+});
+
+// ========================================
 // EMAIL SUBSCRIPTION MODULE
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
