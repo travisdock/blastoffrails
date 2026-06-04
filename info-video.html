@@ -30,7 +30,6 @@
         .video-wrapper {
             max-width: 960px;
             margin: 0 auto;
-            aspect-ratio: 16 / 9;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
@@ -38,10 +37,9 @@
             background: #000;
         }
 
-        .video-wrapper iframe {
+        .video-wrapper video {
             width: 100%;
-            height: 100%;
-            border: 0;
+            height: auto;
             display: block;
         }
 
@@ -93,12 +91,10 @@
             <h1>A Quick Hello</h1>
             <p class="video-intro">A short video from Travis about what to expect at Blastoff Rails.</p>
             <div class="video-wrapper">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/CYWmYd964Jk"
-                    title="Blastoff Rails - Info Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                <video controls preload="metadata" playsinline>
+                    <source src="assets/video/info-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </main>
