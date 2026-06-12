@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blastoff Rails</title>
+    <title>Feedback - Blastoff Rails</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-96x96.png">
     <meta name="theme-color" content="#e9702d">
 
     <!-- Open Graph metadata -->
-    <meta property="og:title" content="Blastoff Rails">
-    <meta property="og:description" content="Join us June 11-12, 2026 in Albuquerque, New Mexico for Blastoff Rails - a Ruby on Rails conference">
+    <meta property="og:title" content="Feedback - Blastoff Rails">
+    <meta property="og:description" content="Send anonymous feedback to the Blastoff Rails organizer">
     <meta property="og:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
-    <meta property="og:url" content="https://blastoffrails.com/">
+    <meta property="og:url" content="https://blastoffrails.com/feedback.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Blastoff Rails">
 
     <!-- Twitter Card metadata -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blastoff Rails">
-    <meta name="twitter:description" content="Join us June 11-12, 2026 in Albuquerque, New Mexico for Blastoff Rails - a Ruby on Rails conference">
+    <meta name="twitter:title" content="Feedback - Blastoff Rails">
+    <meta name="twitter:description" content="Send anonymous feedback to the Blastoff Rails organizer">
     <meta name="twitter:image" content="https://blastoffrails.com/assets/images/backgrounds/social.jpg">
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/main.js" defer></script>
 </head>
-<body class="homepage">
+<body class="page-epic feedback-page">
     <div class="hero-background">
         <div class="hero-overlay"></div>
     </div>
@@ -59,58 +59,26 @@
     </header>
 
     <main>
-        <div class="hero hero-epic">
-            <h1>Blastoff Rails</h1>
-            <p class="conference-tagline">A conference for people who love building with Ruby on Rails</p>
-            <div class="brought-to-you">
-                <p class="brought-to-you-label">Brought to you by</p>
-                <div class="brought-to-you-logos">
-                    <a href="https://typesense.org/" target="_blank" rel="noopener noreferrer" class="brought-to-you-featured">
-                        <img src="assets/images/sponsors/typesense_logo.svg" alt="Typesense">
-                    </a>
-                    <a href="https://avohq.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/sponsors/avo.webp" alt="Avo">
-                    </a>
-                    <a href="https://www.appsignal.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/sponsors/appsignal_logo.svg" alt="AppSignal">
-                    </a>
-                    <a href="https://judoscale.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/sponsors/judoscale.webp" alt="Judoscale">
-                    </a>
-                </div>
-            </div>
+        <div class="container page-content-epic">
+            <section class="about-section">
+                <h2>Feedback</h2>
+                <p>Postive, negative, anything in between. Please tell me what I did right and what I could do better. Any ideas for what you would like to see next year? Anonymous unless you put your name in the text.</p>
 
-            <p class="conference-info">June 11 - 12, 2026</p>
-            <p class="conference-info">Albuquerque, New Mexico</p>
+                <form id="feedback-form" class="feedback-form">
+                    <!-- Replace the value below with your Web3Forms access key -->
+                    <input type="hidden" name="access_key" value="25763b85-055d-4fe0-9e8a-a568da7d7548">
+                    <input type="hidden" name="subject" value="Blastoff Rails feedback">
+                    <input type="hidden" name="from_name" value="Blastoff Rails feedback form">
+                    <!-- Honeypot: bots fill this, humans don't see it -->
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
-            <div class="home-actions">
-                <a href="tickets.html" class="cta-button">Buy a Ticket</a>
-            </div>
+                    <label for="message" class="feedback-label">Your message</label>
+                    <textarea id="message" name="message" rows="8" required placeholder="Tell me anything&hellip;"></textarea>
 
-
-            <div class="social-media-links">
-                <a href="https://x.com/blastoffrails" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <a href="https://bsky.app/profile/blastoffrails.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="BlueSky">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/>
-                    </svg>
-                </a>
-            </div>
-
-            <div class="subscribe-section">
-                <h3>Subscribe for Updates</h3>
-                <form id="subscribe-form">
-                    <input type="email" name="email" placeholder="Your email" required />
-                    <input type="text" name="website" style="display:none" autocomplete="off">
-                    <input type="hidden" name="ts" value="" id="ts">
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" class="blog-button feedback-submit">Send</button>
+                    <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
                 </form>
-                <p id="subscribe-message"></p>
-            </div>
+            </section>
         </div>
     </main>
 
@@ -137,5 +105,47 @@
             <p class="footer-disclaimer">The Rails trademarks are the intellectual property of David Heinemeier Hanson, and exclusively licensed to the Rails Foundation. Uses of 'Rails' and 'Ruby on Rails' in this website are for identification purposes only and do not imply an endorsement by or affiliation with Rails, the trademark owner, or the Rails Foundation.</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const form = document.getElementById('feedback-form');
+            const status = document.getElementById('feedback-status');
+            const submit = form.querySelector('button[type="submit"]');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                status.textContent = '';
+                status.className = 'feedback-status';
+                submit.disabled = true;
+                submit.textContent = 'Sending...';
+
+                const formData = new FormData(form);
+
+                try {
+                    const res = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await res.json();
+                    if (data.success) {
+                        form.reset();
+                        status.textContent = 'Thanks — message received.';
+                        status.classList.add('feedback-status-success');
+                        submit.textContent = 'Sent';
+                    } else {
+                        status.textContent = data.message || 'Something went wrong. Please try again.';
+                        status.classList.add('feedback-status-error');
+                        submit.disabled = false;
+                        submit.textContent = 'Send anonymously';
+                    }
+                } catch (err) {
+                    status.textContent = 'Network error. Please try again.';
+                    status.classList.add('feedback-status-error');
+                    submit.disabled = false;
+                    submit.textContent = 'Send anonymously';
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
