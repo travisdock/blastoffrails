@@ -148,6 +148,7 @@ body.homepage {
 }
 
 .hero-epic .brought-to-you {
+    margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     animation: heroFadeIn 1s ease-out 0.3s both;
 }
@@ -158,6 +159,7 @@ body.homepage {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.75rem;
+    text-align: center;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -449,7 +451,8 @@ body.page-epic {
 }
 
 /* Epic sponsor page styling */
-.page-content-epic .sponsor-slot {
+.page-content-epic .sponsor-slot,
+.hero-epic .sponsor-slot {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -459,13 +462,15 @@ body.page-epic {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.page-content-epic .sponsor-slot:hover {
+.page-content-epic .sponsor-slot:hover,
+.hero-epic .sponsor-slot:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
     background: rgba(255, 255, 255, 1);
 }
 
-.page-content-epic .sponsor-grid-bottom .sponsor-slot:nth-child(2) {
+.page-content-epic .sponsor-grid-bottom .sponsor-slot:nth-child(2),
+.hero-epic .sponsor-grid-bottom .sponsor-slot:nth-child(2) {
     animation-delay: 0.4s;
 }
 
