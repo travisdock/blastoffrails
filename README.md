@@ -6,6 +6,8 @@ A simple, elegant website for Blastoff Rails built with HTML, CSS, and JavaScrip
 
 This repository contains the source code for the Blastoff Rails website. The site is built using vanilla web technologies to keep things simple and maintainable.
 
+Right now this repo is just a coming-soon page for the next event, with an email signup. The full site for the prior event is archived at [2026.blastoffrails.com](https://2026.blastoffrails.com) (repo: `blastoffrails-2026`).
+
 ## Tech Stack
 
 - HTML

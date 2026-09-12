@@ -6,14 +6,14 @@ IMPORTANT: Do not use the word "Conference" on the site. Just use "Blastoff Rail
 
 # Colors Guide
 "text": "#4f6d7bff",          // paynes-gray: clean and readable
-"text-dark": "#54291eff",     // caput-mortuum: deep, strong contrast
-"border": "#b64023ff",        // rust: assertive and warm
-"primary": "#e9702dff",       // spanish-orange: vibrant and eye-catching
-"secondary": "#ffb338ff",     // orange-web: energetic, great for accents
-"primary-dark": "#b64023ff",  // rust: complements primary with more depth
+"text-dark": "#063f6cff",     // yale-blue: deep, cool contrast
+"border": "#063f6cff",        // yale-blue: assertive and cool
+"primary": "#f76c19ff",       // pumpkin-spice: vibrant and eye-catching
+"secondary": "#fca723ff",     // orange: energetic, great for accents
+"primary-dark": "#063f6cff",  // yale-blue: complements primary with more depth
 "bg": "#fef0d4ff",            // papaya-whip: soft, welcoming background
 "bg-alt": "#ffffff",          // white: clean alternate background
-"overlay": "#54291ecc"        // caput-mortuum with opacity for overlays
+"overlay": "#063f6ccc"        // yale-blue with opacity for overlays
 
 # Directory Structure
 ```
@@ -24,12 +24,14 @@ assets/
 ├── js/
 │   └── mailerlite.js
 └── images/
-    ├── speakers/      # Speaker photos
-    ├── sponsors/      # Sponsor logos
     ├── icons/         # Site icons, favicons
-    ├── hero/          # Hero/banner images
-    └── backgrounds/   # Background images
+    ├── logo/          # Brand logo
+    ├── social/        # Open Graph / Twitter share image
+    └── backgrounds/   # Starfield background
 ```
+
+# Current State
+The site is a coming-soon page (index.html) for the next Blastoff Rails. The prior event's full site is archived at 2026.blastoffrails.com (separate repo: blastoffrails-2026).
 
 # Note
 - If you make changes, update the sitemap.xml
