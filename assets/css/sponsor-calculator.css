@@ -1,0 +1,409 @@
+/* Sponsorship Calculator Styles */
+.calculator-section {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    text-align: left;
+    backdrop-filter: blur(6px);
+}
+
+.calculator-section h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.calculator-intro {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tier-selection,
+.addons-section {
+    margin-bottom: 2.5rem;
+}
+
+.tier-selection h3,
+.addons-section h3,
+.calculator-summary h3 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+/* Tier Cards */
+.tier-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.tier-card {
+    position: relative;
+}
+
+.tier-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.tier-card label {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tier-card:hover label {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.tier-card input[type="radio"]:checked + label {
+    background-color: rgba(247, 108, 25, 0.15);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(247, 108, 25, 0.3);
+}
+
+.tier-card h4 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.tier-price {
+    font-size: 1.75rem;
+    color: var(--secondary);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tier-perks {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.tier-perks li {
+    color: var(--text);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tier-perks li:last-child {
+    border-bottom: none;
+}
+
+/* Add-ons */
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.addon-item {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.addon-item:hover {
+    border-color: rgba(252, 167, 35, 0.5);
+}
+
+.addon-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.addon-item label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+}
+
+.addon-item label::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    background-color: var(--bg-alt);
+    transition: all 0.2s ease;
+}
+
+.addon-item input[type="checkbox"]:checked + label::before {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.addon-item input[type="checkbox"]:checked + label::after {
+    content: "\2713";
+    position: absolute;
+    left: 1.25rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-alt);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.addon-item input[type="checkbox"]:checked + label .addon-name {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.addon-name {
+    flex: 1;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1.75rem;
+}
+
+.addon-price {
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* Info Icon and Tooltip */
+.info-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: var(--secondary);
+    color: var(--bg);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: help;
+    transition: background-color 0.2s ease;
+}
+
+.info-icon:hover {
+    background-color: var(--primary);
+}
+
+.info-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-alt);
+    color: var(--bg);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    white-space: normal;
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.info-icon::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--bg-alt);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.info-icon:hover::after,
+.info-icon:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Quantity Add-ons */
+.quantity-addons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.quantity-addon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.quantity-addon label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.quantity-addon input[type="number"] {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 4px;
+    background-color: var(--bg-alt);
+    color: var(--bg);
+    text-align: center;
+}
+
+/* Summary Section */
+.calculator-summary {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 1.75rem;
+}
+
+.summary-content {
+    margin-bottom: 1.5rem;
+}
+
+.summary-tier,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.85rem 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.summary-tier {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.summary-total {
+    border-top: 2px solid var(--primary);
+    margin-top: 0.5rem;
+    padding-top: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+#summary-addons {
+    padding: 0.5rem 0;
+}
+
+#summary-addons .addon-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    color: var(--text);
+}
+
+.calculator-cta {
+    text-align: center;
+}
+
+.calculator-cta p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.copy-feedback {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    min-height: 1.4rem;
+}
+
+.copy-feedback.success {
+    color: var(--secondary);
+}
+
+.copy-feedback.error {
+    color: var(--primary);
+}
+
+/* Mobile adjustments for tooltips */
+@media (max-width: 768px) {
+    .info-icon::after {
+        width: 150px;
+        font-size: 0.8rem;
+        bottom: auto;
+        top: 125%;
+    }
+
+    .info-icon::before {
+        bottom: auto;
+        top: 100%;
+        border-top-color: transparent;
+        border-bottom-color: var(--bg-alt);
+    }
+}
+
+/* Mobile Responsive for Calculator */
+@media (max-width: 768px) {
+    .calculator-section {
+        padding: 1.25rem;
+        margin: 1.5rem 0;
+    }
+
+    .calculator-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .tier-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .addons-grid,
+    .quantity-addons {
+        grid-template-columns: 1fr;
+    }
+
+    .addon-name {
+        font-size: 0.95rem;
+    }
+}
