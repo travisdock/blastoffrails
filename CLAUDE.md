@@ -27,6 +27,7 @@ assets/
     ├── icons/         # Site icons, favicons
     ├── logo/          # Brand logo
     ├── social/        # Open Graph / Twitter share image
+    ├── sponsors/      # Sponsor logos
     └── backgrounds/   # Starfield background
 ```
 

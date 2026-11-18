@@ -67,8 +67,25 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.tagline {
-    font-size: 1.15rem;
+.sponsor {
+    margin-bottom: 1.5rem;
+}
+
+.sponsor-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.sponsor-logo {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+.sponsor-logo-small {
+    width: 140px;
 }
 
 .footer-links {
